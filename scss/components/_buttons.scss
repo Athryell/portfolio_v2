@@ -1,0 +1,50 @@
+@use '../base/typography' as *;
+@use '../abstracts/colors' as *;
+
+.btn {
+    display: inline-block;
+    border: none;
+    border-radius: 0.25rem;
+    padding: 0.5rem 1rem;
+    font-weight: $fw-bold;
+    text-transform: uppercase;
+    font-size: 0.875rem;
+    line-height: var(--lh-body);
+    cursor: pointer;
+    
+}
+
+.btn-primary {
+    background-color: var(--col-primary);
+    color: var(--col-lightest);
+    box-shadow: 0px 3px 2.2px 0px hsla(0, 0%, 100%, 0.02),
+                0px 7px 5.3px 0px hsla(0, 0%, 100%, 0.03),
+                0px 12px 10px 0px hsla(0, 0%, 100%, 0.04),
+                0px 22px 18px 0px hsla(0, 0%, 100%, 0.04),
+                0px 42px 33px 0px hsla(0, 0%, 100%, 0.05),
+                0px 100px 80px 0px hsla(0, 0%, 100%, 0.07);
+
+    &:hover {
+        background-color: var(--col-primary-darker);
+    }
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: var(--col-primary);
+    border: 2px solid var(--col-primary);
+
+    &:hover {
+        background-color: hsla(0, 0%, 100%, 0.2);
+    }
+}
+
+.btn-big {
+    padding: 0.74rem 1.5rem;
+}
+
+.btn-small {
+    padding: 0.24rem 0.75rem;
+
+}
+

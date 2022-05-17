@@ -1,0 +1,36 @@
+:root {
+    --col-primary: hsl(21, 99%, 50%);
+    --col-primary-darker: hsl(21, 100%, 40%);
+
+    // --col-secondary-darkest:hsl(181, 100%, 13%);
+    // --col-secondary-dark: rgb(0, 95, 97);
+    --col-secondary: hsl(180, 86%, 28%);
+    // --col-secondary-light: hsl(181, 70%, 39%);
+    // --col-secondary-lightest: hsl(180, 32%, 56%);
+
+    --col-darkest: hsl(191, 13%, 17%);
+    --col-dark: hsl(188, 10%, 30%);
+    --col-neutral: hsl(188, 6%, 50%);
+    --col-light: hsl(187, 7%, 75%);
+    --col-lightest: hsl(192, 6%, 85%);
+}
+
+// $colors: (
+//     primary: (
+//         400: #fd5901,
+//     ),
+//     secondary: (
+//         400: hsl(180, 86%, 28%),
+//     ),
+//     grey: (
+//         800: hsl(191, 13%, 17%),
+//         700: hsl(188, 10%, 30%),
+//         400: hsl(188, 6%, 50%),
+//         300: hsl(187, 7%, 75%),
+//         200: hsl(192, 6%, 85%),
+//     )
+// );
+
+// $test: (
+//     color: red
+// )
