@@ -31,10 +31,11 @@
         </header>
 
     <div class="container">
-        <section class="section" id="hero">
+        <!-- Hero -->
+        <section class="section section--hero" id="hero">
             <div class="section__title section__title--hero">
-                <h3>Hi there,</h3>
-                <h1>I'm Alessandro</h1>
+                <h3>Hi there, I'm</h3>
+                <h1>Alessandro</h1>
                 <h3>a <span class="accent">curious</span> web developer</h3>
             </div>
             <img class="hero__img" src="img/hero_img_placeholder.png" alt="Alex say hi">
@@ -43,169 +44,176 @@
             </div>
         </section>
         
+        <!-- Services -->
         <section class="section" id="services">
             <h1 class="section__title">What I do</h1>
-            <div class="tri-way-toggle">
-                <label class="toggle toggle-icons">
+            <div class="toggler tri-way-toggle">
+                <label class="tri-way-toggle__label tri-way-toggle__label--icons">
                     Icons
-                    <input type="radio" class="button" type="radio" name="toggle" id="one">
+                    <input type="radio" class="tri-way-toggle__input" type="radio" name="toggle" id="toggle-icon">
                 </label>
-                <label class="toggle toggle-both">
+                <label class="tri-way-toggle__label tri-way-toggle__label--both">
                     Both
-                    <input type="radio" class="button" type="radio" name="toggle" id="two">
+                    <input type="radio" class="tri-way-toggle__input" type="radio" name="toggle" id="toggle-both">
                 </label>
-                <label for="" class="toggle toggle-text">
+                <label class="tri-way-toggle__label tri-way-toggle__label--text">
                     Text
-                    <input type="radio" class="button" type="radio" name="toggle" id="three">
+                    <input type="radio" class="tri-way-toggle__input" type="radio" name="toggle" id="toggle-text">
                 </label>
             </div>
+
             <div class="services">
-                <article class="services__article">
-                    <h2>Front-end</h2>
+                <article class="article">
+                    <h2 class="services__title">Front-end</h2>
                     <p>I will build a responsive website using HTML, CSS and JavaScript designing it on Figma.</p>
                     <p>I love to work with SVG combined with animations (such as Green Socket's)</p>
                     <p>I also love SASS and jQuery. If you like I can use Bootstrap</p>
                 </article>
-                <article class="services__article">
-                    <h2>Back-end</h2>
+                <article class="article">
+                    <h2 class="services__title">Back-end</h2>
                     <p>I build dynamic websites, such as an e-commerce on Django using Python.</p>
                 </article>
-                <article class="services__article">
-                    <h2>Other</h2>
+                <article class="article">
+                    <h2 class="services__title">Other</h2>
                     <p>I use VS Code and the command line to updated the code on Github</p>
                     <p>I also have fun building games with C-sharp on the Unity Engine with a touch of Blender I use DaVinci Resolve for video editing.</p>
                 </article>
             </div>
             <article>
-                <h3>Currently learning</h3>
+                <h3 class="services__title services__title--learning">Currently learning</h3>
                 <p>React (it's fun!)</p>
                 <p>Accessibility (a fan of)</p>
             </article>
         </section>
 
+        <!-- About -->
         <section class="section" id="about">
             <h1 class="section__title">Who am I</h1>
 
-            <form id="about__form" class="about-length-control">
-                <legend class="about__legend">Adjust bio length:</legend>
-                <div class="about-length-options">
+            <div class="about__toggle-container">
+                <legend class="about__legend"><small class="test">Adjust bio length</small></legend>
+                <div class="toggler toggler__about">
                     <label class="about__label">
-                        Short
+                        <small>Short</small>
                         <input class="about__input" type="radio" id="length-short" name="about-length" value="short" autocomplete="off" />
-                        <span class="about-checkmark"></span>
+                        <span class="about__checkmark"></span>
                     </label>
                     <label class="about__label">
                         <input class="about__input" type="radio" id="length-normal" name="about-length" value="normal" autocomplete="off" checked />
-                        <span class="about-checkmark"></span>
+                        <span class="about__checkmark"></span>
                     </label>
                     <label class="about__label">
-                        Looong
+                        <small>Looong</small>
                         <input class="about__input" type="radio" id="length-long" name="about-length" value="long" autocomplete="off" />
-                        <span class="about-checkmark"></span>
+                        <span class="about__checkmark"></span>
                     </label>
                 </div>
-            </form>
+            </div>
 
-            <div class="about__content">
+            <article class="article">
                 <p>I'm a junior full-stack developer.</p>
                 <p>I'm a self-motivated learner with strong communication skills, huge passion and an endless curiosity.</p>
                 <p>I'm able to work independently & collaboratively in a team with a meticulous attention to detail.</p>
                 <p>I like to get out of the comfort zone because it allows me to improve and evolve</p>
-            </div>
+            </article>
 
         </section>
 
+        <!-- My work -->
         <section class="section" id="work">
             <h1 class="section__title">My work</h1>
-            <div class="card">
-                <h3 class="card__title">E-commerce clone</h3>
-                <div class="card__tags">
-                    <span>Django</span>
-                    <span>Jquery</span>
+            <div class="card-container">
+                <div class="card">
+                    <h3 class="card__title">E-commerce clone</h3>
+                    <div class="card__tags">
+                        <span>Django</span>
+                        <span>Jquery</span>
+                    </div>
+                    <a class="btn btn-primary btn-small">check it out <i class="fas fa-arrow-up-right-from-square"></i></a>
                 </div>
-                <button class="btn btn-primary btn-small">check it out</button>
-            </div>
-            <div class="card">
-                <h3 class="card__title">Mail service clone</h3>
-                <div class="card__tags">
-                    <span>Bootstrap</span>
+                <div class="card">
+                    <h3 class="card__title">Mail service clone</h3>
+                    <div class="card__tags">
+                        <span>Bootstrap</span>
+                    </div>
+                    <a class="btn btn-primary btn-small">check it out <i class="fas fa-arrow-up-right-from-square"></i></a>
                 </div>
-                <button class="btn btn-primary btn-small">check it out</button>
-            </div>
-            <div class="card">
-                <h3 class="card__title">Social network clone</h3>
-                <div class="card__tags">
-                    <span>Bootstrap</span>
+                <div class="card">
+                    <h3 class="card__title">Social network clone</h3>
+                    <div class="card__tags">
+                        <span>Bootstrap</span>
+                    </div>
+                    <a class="btn btn-primary btn-small">check it out <i class="fas fa-arrow-up-right-from-square"></i></a>
                 </div>
-                <button class="btn btn-primary btn-small">check it out</button>
             </div>
         </section>
 
+        <!-- My codepen -->
         <section class="section" id="codepen">
             <h1 class="section__title">I like to play around</h1>
-            <div class="card">
-                <h3 class="card__title">Social network clone</h3>
-                <div class="card__codepen-example">
-                    [STAR]
+            <div class="card-container">
+                <div class="card">
+                    <h3 class="card__title">Dark/light theme toggle</h3>
+                    <div class="card__codepen-example">
+                        [STAR]
+                    </div>
+                    <a class="btn btn-primary btn-small"><i class="fab fa-codepen"></i> Codepen</a>
                 </div>
-                <button class="btn btn-primary btn-small">[C] Codepen</button>
-            </div>
-            <div class="card">
-                <h3 class="card__title">Social network clone</h3>
-                <div class="card__codepen-example">
-                    [HOVER]
+                <div class="card">
+                    <h3 class="card__title">Social network clone</h3>
+                    <div class="card__codepen-example">
+                        [HOVER]
+                    </div>
+                    <a class="btn btn-primary btn-small"><i class="fab fa-codepen"></i> Codepen</a>
                 </div>
-                <button class="btn btn-primary btn-small">[C] Codepen</button>
             </div>
             
         </section>
 
+        <!-- Contact -->
         <section class="section" id="contact">
-            <h1 class="section__title">Get in touch!</h1>
-            <p>Feel free to contact me! <br>
-            I’m always open to discuss new projects, creative ideas or opportunities to be a part of your vision.</p>
+            <div class="article">
+                <h1 class="section__title">Get in touch!</h1>
+                <p>Feel free to contact me!</p>
+                <p>I’m always open to discuss new projects, creative ideas or opportunities to be a part of your vision.</p>
+            </div>
 
-            <span>[MAIL] aleprovvi@yahoo.it</span>
+            <span class="my-mail"><i class="fas fa-envelope"></i> aleprovvi@yahoo.it</span>
 
             <form action="#" class="contact-form">
-                <div class="input-container">
-                    <input type="text" id="name" class="input" autocomplete="off" placeholder=" ">
-                    <label for="name" class="label">
-                        <span class="label__text">Name</span>
+                <div class="contact__input-container">
+                    <input type="text" id="name" class="contact__input" autocomplete="off" placeholder=" ">
+                    <label for="name" class="contact__label">
+                        <span class="contact__text">Name</span>
                     </label>
                 </div>
 
-                <div class="input-container">
-                    <input type="email" id="email" class="input" autocomplete="off" placeholder=" ">
-                    <label for="email" class="label">
-                        <span class="label__text">Name</span>
+                <div class="contact__input-container">
+                    <input type="email" id="email" class="contact__input" autocomplete="off" placeholder=" ">
+                    <label for="email" class="contact__label">
+                        <span class="contact__text">Email</span>
                     </label>
                 </div>
 
-                <div class="input-container">
-                    <input type="email" id="email" class="input" autocomplete="off" placeholder=" ">
-                    <label for="email" class="input-container__label">
-                        <span class="label__text">Email</span>
+                <div class="contact__input-container">
+                    <textarea class="contact__input contact__input--textarea" type="text" cols="" rows=5" id="message" autocomplete="off" placeholder=" "></textarea>
+                    <label for="message" class="contact__label">
+                        <span class="contact__text">Your message</span>
                     </label>
                 </div>
 
-                <div class="input-container input-container__textarea">
-                    <textarea class="input"  type="text" cols="30" rows="1" id="message" autocomplete="off" placeholder=" "></textarea>
-                    <label for="message" class="input__label">
-                        <span class="input__text">Your message here</span>
-                    </label>
-                </div>
-
-                <button class="btn btn-primary btn-big" type="submit">Send</button>
+                <button class="btn btn-primary btn-big" type="submit">Send <i class="fas fa-paper-plane"></i></button>
             </form>
 
         </section>
 
-        <footer>
-            <span class="made-by">Made by Alessandro Provvisionato</span>
-            <div class="social-icons">
-                <span>[CP]</span>
-                <span>[GH]</span>
+        <footer class="footer">
+            <div class="footer__container">
+                <span class="made-by">Made by Alessandro Provvisionato</span>
+                <div class="social-icons">
+                    <span><i class="fab fa-codepen"></i></span>
+                    <span><i class="fab fa-github"></i></span>
+                </div>
             </div>
         </footer>
     </div>

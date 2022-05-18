@@ -1,7 +1,22 @@
 const menuToggle = document.querySelector('.menu-toggle')
-const nav = document.querySelector('.navbar-menu')
+const navBar = document.querySelector('.navbar-menu')
 
+const twInputs = document.querySelectorAll('.tri-way-toggle__input')
+const twArr = [...twInputs]
+
+// Open-close phone navbar
 menuToggle.addEventListener('click', () => {
-    nav.classList.toggle('nav-open')
+    navBar.classList.toggle('nav-open')
     menuToggle.classList.toggle('menu-toggle-open')
+})
+
+// Three way toggle manager
+twInputs.forEach(e => {
+    e.addEventListener('click', () => {
+        e.parentElement.style.color = 'var(--col-primary)'
+
+        twArr
+            .filter((item) => { return item != e })
+            .forEach((item) => { item.parentElement.style.color = 'var(--col-lightest)' })
+    })
 })

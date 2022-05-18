@@ -16,13 +16,13 @@
 
 .btn-primary {
     background-color: var(--col-primary);
-    color: var(--col-lightest);
-    box-shadow: 0px 3px 2.2px 0px hsla(0, 0%, 100%, 0.02),
-                0px 7px 5.3px 0px hsla(0, 0%, 100%, 0.03),
-                0px 12px 10px 0px hsla(0, 0%, 100%, 0.04),
-                0px 22px 18px 0px hsla(0, 0%, 100%, 0.04),
-                0px 42px 33px 0px hsla(0, 0%, 100%, 0.05),
-                0px 100px 80px 0px hsla(0, 0%, 100%, 0.07);
+    color: var(--col-darkest);
+    // box-shadow: 0px 3px 2.2px 0px hsla(0, 0%, 100%, 0.02),
+    //             0px 7px 5.3px 0px hsla(0, 0%, 100%, 0.03),
+    //             0px 12px 10px 0px hsla(0, 0%, 100%, 0.04),
+    //             0px 22px 18px 0px hsla(0, 0%, 100%, 0.04),
+    //             0px 42px 33px 0px hsla(0, 0%, 100%, 0.05),
+    //             0px 100px 80px 0px hsla(0, 0%, 100%, 0.07);
 
     &:hover {
         background-color: var(--col-primary-darker);
@@ -41,10 +41,10 @@
 
 .btn-big {
     padding: 0.74rem 1.5rem;
+    font-size: var(--fs-h3);
 }
 
 .btn-small {
     padding: 0.24rem 0.75rem;
-
 }
 
