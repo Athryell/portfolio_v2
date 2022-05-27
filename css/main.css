@@ -142,6 +142,7 @@ small {
   --col-light: hsl(187, 7%, 75%);
   --col-lightest: hsl(192, 6%, 85%);
   --col-error: hsl(0, 100%, 55%);
+  --col-success: hsl(155, 95%, 37%);
 }
 
 html {
@@ -879,6 +880,7 @@ em {
   }
 }
 .section--contact {
+  position: relative;
   border-bottom: none;
 }
 .section--contact .article {
@@ -947,6 +949,24 @@ em {
 
 .paper-plane {
   margin-left: 0.5em;
+}
+
+.success-text {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: 2rem;
+  font-size: var(--fs-body);
+  background-color: var(--col-success);
+  color: var(--col-darkest);
+  padding: 0.5rem 1rem;
+  border-radius: 0.125rem;
+}
+@media (min-width: 600px) {
+  .success-text {
+    margin-top: 5rem;
+  }
 }
 
 .error-icon {

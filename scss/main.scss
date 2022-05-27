@@ -278,6 +278,7 @@
 //* - - - - - - - - - - - - - - - - - CONTACTS - - - - - - - - - - - - - - - - -
 
 .section--contact {
+    position: relative;
     border-bottom: none;
 
     .article {
@@ -347,6 +348,23 @@
 }
 
 .paper-plane { margin-left: 0.5em; }
+
+.success-text {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 2rem;
+    font-size: var(--fs-body);
+    background-color: var(--col-success);
+    color: var(--col-darkest);
+    padding: 0.5rem 1rem;
+    border-radius: $br-s;
+
+    @include for-tablet-portrait-up {
+        margin-top: 5rem;
+    }
+}
 
 .error-icon {
     position: absolute;

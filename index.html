@@ -336,6 +336,8 @@
 
         <!-- Contact -->
         <section class="section section--contact" aria-labelledby="contact__title" id="contact">
+            <span id="success-text" class="success-text">Message successfully sent!</span>
+            
             <div class="article">
                 <h1 class="section__title title-separator" id="contact__title">Get in touch!</h1>
                 <p>Feel free to contact me!</p>
@@ -346,7 +348,7 @@
 
             <form action="https://formsubmit.co/alessandro.provvisionato@hotmail.com" method="POST" class="contact-form">
                 <input type="hidden" name="_subject" value="New message from portfolio!">
-                <input type="hidden" name="_next" value="https://alepro.netlify.com">
+                <input type="hidden" name="_next" value="https://alepro.netlify.com#success-text">
 
                 <div class="contact__input-container">
                     <input type="text" id="name" name="name" class="contact__input" autocomplete="off" placeholder=" " required>

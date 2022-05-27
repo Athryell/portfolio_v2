@@ -142,6 +142,7 @@ small {
   --col-light: hsl(187, 7%, 75%);
   --col-lightest: hsl(192, 6%, 85%);
   --col-error: hsl(0, 100%, 55%);
+  --col-success: hsl(155, 95%, 37%);
 }
 
 html {

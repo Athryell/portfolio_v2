@@ -8,6 +8,18 @@ const textContainer = document.querySelectorAll('.services__text')
 const inputAbout = document.querySelectorAll('.about__input')
 const aboutArticles = document.querySelectorAll('[data-length]')
 
+window.addEventListener('load', () => {
+    if (window.location.href.includes('#success-text')) {
+        const successAlert = document.getElementById('success-text')
+
+        successAlert.style.display = 'block'
+
+        setTimeout(() => {
+            successAlert.style.display = 'none'
+        }, 5000)
+    }
+})
+
 // Open-close phone navbar
 menuToggle.addEventListener('click', () => {
     navBar.classList.toggle('nav-open')
