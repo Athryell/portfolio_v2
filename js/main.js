@@ -58,3 +58,33 @@ email.addEventListener('focus', () => {
     errorIcon.style.display = 'none'
     errorText.style.display = 'none'
 })
+
+// - - - - - - - - - - GO TOP BUTTON - - - - - - - - - -
+
+const goTopButton = document.getElementById('top-btn')
+
+goTopButton.addEventListener('click', () => {
+    document.body.scrollTop = 0; // For Safari
+    document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+})
+
+// - - - - - - - - - - OBSERVER - - - - - - - - - -
+
+const header = document.querySelector('.header')
+
+const options = {
+    root: null,
+    threshold: 0,
+    rootMargin: '0px'
+}
+
+const headerObserver = new IntersectionObserver(function (entries, observer) {
+    if (entries[0].isIntersecting === false)
+    {
+        goTopButton.classList.add('reveal')
+    } else {
+        goTopButton.classList.remove('reveal')
+    }
+}, options)
+
+headerObserver.observe(header)

@@ -428,6 +428,67 @@ em {
   padding: 0.24rem 0.75rem;
 }
 
+#top-btn {
+  display: none;
+  position: fixed;
+  z-index: 99;
+  bottom: 1rem;
+  right: 1rem;
+  padding: 0;
+  border: 1px solid var(--col-neutral);
+  border-radius: 0.25rem;
+  background-color: var(--col-dark);
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+#top-btn:hover {
+  background-color: var(--col-darkest);
+}
+#top-btn .iconify {
+  font-size: 1rem;
+  margin: 0.75rem;
+  margin-bottom: 0.5rem;
+  color: var(--col-secondary);
+}
+#top-btn.reveal {
+  display: block;
+  animation-name: btn-reveal;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-out;
+}
+#top-btn.reveal .iconify {
+  animation-name: arrow-up;
+  animation-duration: 1.5s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease;
+}
+@keyframes btn-reveal {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes arrow-up {
+  0% {
+    transform: translateY(0);
+  }
+  25% {
+    transform: translateY(0.25rem);
+  }
+  50% {
+    transform: translateY(-0.25rem);
+  }
+  75% {
+    transform: translateY(0.25rem);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
 .section__title {
   display: inline-block;
 }

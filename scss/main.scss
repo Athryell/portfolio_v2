@@ -232,7 +232,7 @@
     background-size: 100% 1px;
 }
 
-.fa-envelope { color: var(--col-primary)}
+.envelope { margin-right: 0.5em; }
 
 .my-mail { margin-top: 2rem}
 
@@ -290,9 +290,7 @@
     letter-spacing: 0.1em;
 }
 
-.fa-paper-plane {
-    margin-left: 0.5rem;
-}
+.paper-plane { margin-left: 0.5em; }
 
 .error-icon {
     position: absolute;
