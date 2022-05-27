@@ -1,0 +1,78 @@
+@use '../abstracts' as *;
+
+$br-s: 0.125rem;
+$br-m: 0.25rem;
+$br-l: 0.5rem;
+
+html {
+    font-size: 16px;
+}
+
+body {
+    background-color: var(--col-darkest);
+    background-image: url('../../img/bg-funky-lines.png');
+    background-blend-mode: multiply;
+    color: var(--col-lightest);
+}
+
+.accent-primary { color: var(--col-primary); }
+
+.link {
+    color: var(--col-primary);
+    text-decoration: underline;
+}
+
+em {
+    color: var(--col-secondary);
+    font-style: normal;
+}
+
+.section {
+    padding: 5rem 2rem;
+    border-bottom: 1px solid var(--col-dark);
+    text-align: center;
+
+    @include for-tablet-portrait-up {
+        padding: 11.5rem 3.5rem;
+    }
+
+    @include for-tablet-landscape-up {
+        padding: 11.5rem 12rem;
+    }
+}
+
+.section__title {
+    position: relative;
+    padding-bottom: 1rem;
+    margin-bottom: 2rem;
+}
+
+.title-separator {
+    &::after {
+        content: '';
+        position: absolute;
+        background-color: var(--col-primary-darker);
+        top: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 6rem;
+        height: 1px;
+    }
+}
+
+.article {
+    margin-bottom: 2rem;
+
+    p {
+        text-align: left;
+        margin-bottom: 1.5rem;
+    }
+}
+
+.toggler {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    margin-inline: auto;
+    margin-bottom: 1.5rem;
+}

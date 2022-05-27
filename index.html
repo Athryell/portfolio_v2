@@ -6,89 +6,135 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Alex's portfolio</title>
     <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/iconify/2.2.1/iconify.min.js" integrity="sha512-sU5Gzc108d8ERAXEUoNh3DZQ3GZCQyygVkeuhIxFR+D9Go8kLw3Ce3HVD/AI5cnhGzW7Km9V4oOOiepKcD0vlg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </head>
 <body>
-    
-        <header class="header">
-            <div class="header__container">
-                <a href="#hero">
-                    <span class="name"> A&lt;/&gt;ex </span>
-                </a>
-                
-                <nav class="navbar-menu">
-                    <ul class="menu" role="list">
-                        <li><a href="#services"><i class="fas fa-laptop-code"></i>Services</a></li>
-                        <li><a href="#about"><i class="fas fa-address-card"></i>About</a></li>
-                        <li><a href="#contact" class="btn btn-small btn-secondary" ><i class="fas fa-envelope"></i>Contact</a></li>
-                    </ul>
-                </nav>
-                
-                <div class="menu-toggle">
-                    <div></div>
-                </div>
-            </div>
-        </header>
+    <header class="header">
+        
+        <a class="skip-nav-link" href="#main-content">
+            Skip navigation
+        </a>
 
-    <div class="container">
+        <div class="header__container">
+            <a href="./index.html">
+                <span class="name"> A&lt;/&gt;ex </span>
+            </a>
+            
+            <nav class="navbar-menu">
+                <ul class="menu" role="list">
+                    <li><a href="#services"><i class="iconify-inline" data-icon="bi:list-check"></i>What I do</a></li>
+                    <li><a href="#about"><i class="iconify-inline" data-icon="fa6-solid:id-card"></i>Who I am</a></li>
+                    <li><a href="#work"><i class="iconify-inline" data-icon="fa6-solid:laptop-code"></i></i></i>My work</a></li>
+                    <li><a href="#contact" class="btn-small btn-secondary"><i class="iconify-inline" data-icon="fa6-solid:envelope"></i>Contact</a></li>
+                </ul>
+            </nav>
+            
+            <div class="menu-toggle">
+                <div></div>
+            </div>
+        </div>
+    </header>
+
+    <main class="container" id="main-content">
         <!-- Hero -->
-        <section class="section section--hero" id="hero">
-            <div class="section__title section__title--hero">
-                <h3>Hi there, I'm</h3>
-                <h1>Alessandro</h1>
-                <h3>a <span class="accent">curious</span> web developer</h3>
+        <section class="section section--hero" id="hero" aria-labelledby="hero__title">
+            <div class="section__title section__title--hero" id="hero__title">
+                    <p>Hi there, I'm</p>
+                    <h1>Alessandro</h1>
+                    <p>a <em>curious</em> web developer</p>
             </div>
             <img class="hero__img" src="img/hero_img_placeholder.png" alt="Alex say hi">
             <div class="hero__btn">
-                <a class="btn btn-primary" href="#work">See my work <i class="fas fa-arrow-turn-down"></i></a>
+                <a class="btn-primary" href="#work">See my work <i class="iconify-inline" data-icon="fa6-solid:arrow-turn-down"></i></a>
             </div>
         </section>
         
         <!-- Services -->
-        <section class="section" id="services">
-            <h1 class="section__title">What I do</h1>
-            <div class="toggler tri-way-toggle">
-                <label class="tri-way-toggle__label tri-way-toggle__label--icons">
-                    Icons
-                    <input type="radio" class="tri-way-toggle__input" type="radio" name="toggle" id="toggle-icon">
-                </label>
-                <label class="tri-way-toggle__label tri-way-toggle__label--both">
-                    Both
-                    <input type="radio" class="tri-way-toggle__input" type="radio" name="toggle" id="toggle-both">
-                </label>
-                <label class="tri-way-toggle__label tri-way-toggle__label--text">
-                    Text
-                    <input type="radio" class="tri-way-toggle__input" type="radio" name="toggle" id="toggle-text">
+        <section class="section" id="services" aria-labelledby="services__title">
+            <h1 class="section__title title-separator" id="services__title">What I do</h1>
+
+            <noscript><small>You need to enable JavaScript to use this button.</small></noscript>
+
+            <div class="toggle-services">
+                <label class="toggle-services__label">
+                    <input type="checkbox" name="show-icons-toggle" class="toggle-services__input" autocomplete="off">
+                    <div class="knob"></div>
                 </label>
             </div>
-
+            
             <div class="services">
                 <article class="article">
                     <h2 class="services__title">Front-end</h2>
-                    <p>I will build a responsive website using HTML, CSS and JavaScript designing it on Figma.</p>
-                    <p>I love to work with SVG combined with animations (such as Green Socket's)</p>
-                    <p>I also love SASS and jQuery. If you like I can use Bootstrap</p>
+                    <div class="services__text">
+                        <p>I will build a responsive website using HTML, CSS and JavaScript designing it on Figma.</p>
+                        <p>I love to work with SVG combined with animations (such as Green Socket's)</p>
+                        <p>I also love SASS and jQuery. If you like I can use Bootstrap</p>
+                    </div>
+                    <div class="services__icons" hidden>
+                        <p>
+                            <span class="tooltip-wrapper" data-tooltip="HTML 5"><i class="iconify" data-icon="vscode-icons:file-type-html"></i></span>
+                            <span class="tooltip-wrapper" data-tooltip="CSS 3"><i class="iconify" data-icon="vscode-icons:file-type-css"></i></span>
+                            <span class="tooltip-wrapper" data-tooltip="JavaScript"><i class="iconify" data-icon="logos:javascript"></i></span>
+                        </p>
+                        <p><span class="tooltip-wrapper" data-tooltip="Figma"><i class="iconify" data-icon="logos:figma"></i></p></span>
+                        <p>
+                            <span class="tooltip-wrapper" data-tooltip="Sass/Scss"><i class="iconify" data-icon="logos:sass"></i></span>
+                            <span class="tooltip-wrapper" data-tooltip="jQuery"><i class="iconify" data-icon="simple-icons:jquery"></i></span>
+                            <span class="tooltip-wrapper" data-tooltip="Bootstrap"><i class="iconify" data-icon="logos:bootstrap"></i></span>
+                        </p>
+                    </div>
                 </article>
                 <article class="article">
                     <h2 class="services__title">Back-end</h2>
-                    <p>I build dynamic websites, such as an e-commerce on Django using Python.</p>
+                    <div class="services__text">
+                        <p>I build dynamic websites, such as an e-commerce on Django using Python.</p>
+                    </div>
+                    <div class="services__icons" hidden>
+                        <p>
+                            <span class="tooltip-wrapper" data-tooltip="Django"><i class="iconify" data-icon="logos:django-icon"></i></span>
+                            <span class="tooltip-wrapper" data-tooltip="Python"><i class="iconify" data-icon="logos:python"></i></span>
+                            <span class="tooltip-wrapper" data-tooltip="AWS"><i class="iconify bg-light" data-icon="logos:aws"></i></span>
+                        </p>
+                    </div>
                 </article>
                 <article class="article">
                     <h2 class="services__title">Other</h2>
-                    <p>I use VS Code and the command line to updated the code on Github</p>
-                    <p>I also have fun building games with C-sharp on the Unity Engine with a touch of Blender I use DaVinci Resolve for video editing.</p>
+                    <div class="services__text">
+                        <p>I use VS Code and the command line to updated the code on <a class="link" href="https://github.com/Athryell">Github</a></p>
+                        <p>I have a lot of fun playing with micro-interactions on <a class="link" href="https://codepen.io/athryell">Codepen</a> </p>
+                        <p>I also have fun building games with C-sharp on the Unity Engine with a touch of Blender</p>
+                    </div>
+                    <div class="services__icons" hidden>
+                        <p>
+                            <span class="tooltip-wrapper" data-tooltip="VS Code"><i class="iconify" data-icon="logos:visual-studio-code"></i></span>
+                            <span class="tooltip-wrapper" data-tooltip="Command Line"><i class="iconify" data-icon="simple-icons:powershell"></i></span>
+                            <span class="tooltip-wrapper" data-tooltip="C-sharp"><i class="iconify" data-icon="logos:c-sharp"></i></span>
+                            <span class="tooltip-wrapper" data-tooltip="Unity"><i class="iconify bg-light" data-icon="logos:unity"></i></span>
+                            <span class="tooltip-wrapper" data-tooltip="Blender"><i class="iconify" data-icon="logos:blender"></i></span>
+                        </p>
+                    </div>
+                </article>
+                
+                <article>
+                    <h3 id="currently-learning" class="services__title services__title--learning">Currently learning</h3>
+                    <div class="services__text">
+                        <p>React (it's fun!)</p>
+                        <p>Accessibility (a fan of)</p>
+                    </div>
+                    <div class="services__icons" hidden>
+                        <p>
+                            <span class="tooltip-wrapper" data-tooltip="React"><i class="iconify" data-icon="logos:react"></i></span>
+                            <span class="tooltip-wrapper" data-tooltip="Accessibility"><i class="iconify" data-icon="iconoir:accessibility"></i></span>
+                            
+                        </p>
+                    </div>
                 </article>
             </div>
-            <article>
-                <h3 class="services__title services__title--learning">Currently learning</h3>
-                <p>React (it's fun!)</p>
-                <p>Accessibility (a fan of)</p>
-            </article>
         </section>
 
         <!-- About -->
-        <section class="section" id="about">
-            <h1 class="section__title">Who am I</h1>
+        <section class="section" id="about" aria-labelledby="about_title">
+            <h1 class="section__title title-separator" id="about_title">Who am I</h1>
 
             <div class="about__toggle-container">
                 <legend class="about__legend"><small class="test">Adjust bio length</small></legend>
@@ -111,112 +157,236 @@
             </div>
 
             <article class="article">
-                <p>I'm a junior full-stack developer.</p>
-                <p>I'm a self-motivated learner with strong communication skills, huge passion and an endless curiosity.</p>
-                <p>I'm able to work independently & collaboratively in a team with a meticulous attention to detail.</p>
-                <p>I like to get out of the comfort zone because it allows me to improve and evolve</p>
+                <div class="about-short" data-length="short">
+                    <p>I love to learn and build stuff.</p>
+                    <p>That's it!</p>
+                </div>
+                <div class="about-normal reveal-about" data-length="normal">
+                    <p>I'm a junior full-stack developer.</p>
+                    <p>I'm a self-motivated learner with strong communication skills, huge passion and an endless curiosity.</p>
+                    <p>I'm able to work independently & collaboratively in a team with a meticulous attention to detail.</p>
+                    <p>I like to get out of the comfort zone because it allows me to improve and evolve</p>
+                </div>
+                <div class="about-long" data-length="long">
+                    <p>Everything started when my mother met my father...</p>
+                    <p>... quick fast-forward to a couple of years ago, when I realized I always loved to understand how the things are made to build them myself so I decided I wanted to learn a programming language in order to be able to build something from scratch. The easiest thing was starting building games (you can see something really simple here) and after my first game-jam i moved from building games in C# to learn Python and build some software.</p>
+                    <p>From there the slipping into web development was really a matter of time, after the back end which satisfy my tecnical-skill-mind I landed on web design, which nourishes the amused-creative-child.</p>
+                    <p>Ps: I did many jobs from security and self defence teacher to board-game seller, and I've always been curious</p>
+
+                </div>
+                
             </article>
 
         </section>
 
         <!-- My work -->
-        <section class="section" id="work">
-            <h1 class="section__title">My work</h1>
+        <section class="section" id="work" aria-labelledby="work__title">
+            <h1 class="section__title title-separator" id="work__title">My work</h1>
             <div class="card-container">
-                <div class="card">
-                    <h3 class="card__title">E-commerce clone</h3>
-                    <div class="card__tags">
-                        <span>Django</span>
-                        <span>Jquery</span>
+
+                <aside class="disclaimer">
+                    <small>
+                        <h1 class="disclaimer__title">Disclaimer</h1>
+                        <p>
+                            Some of these project were only <em>back-end focused</em>, I didn’t have a lot of CSS and design experience at the time.
+                        </p>
+                        <p>
+                            I'm currently <em>beautifying</em> them so I can show you something a little bit nicer, but if you really want to see them in action I temporary linked some <em>video</em> with an overview of the projects!
+                        </p>
+                    </small>
+                </aside>
+
+                <div class="card"> <!-- Happy Dungeon -->
+                    <img class="card__img" src="./img/happydungeon_placeholder.jpg" alt="homepage of happydungeon.quest website">
+                    <div class="card__inner">
+                        <h2 class="card__title">My boardgame website</h2>
+                        <div class="card__text">
+                            This was first django deployed website. <br>
+                            I built it to store rulebooks, tutorial and helper for solo game (I did some nice animations with GSAP).
+                            Yep, currently it's in italian, sorry!
+                        </div>
+
+                        <div class="card__links">
+                            <a class="btn-primary btn-small" href="https://happydungeon.quest" target="_blank">Check it out</a>
+                            <a class="btn-secondary btn-small" target="_blank" href="https://github.com/Athryell/happy_dungeon">Github</a>
+                        </div>
                     </div>
-                    <a class="btn btn-primary btn-small">check it out <i class="fas fa-arrow-up-right-from-square"></i></a>
                 </div>
-                <div class="card">
-                    <h3 class="card__title">Mail service clone</h3>
-                    <div class="card__tags">
-                        <span>Bootstrap</span>
+
+                <div class="card"> <!-- E commerce -->
+                    <img class="card__img" src="./img/ecommerce_placeholder.jpg" alt="homepage of ecommerce website">
+                    <div class="card__inner">
+                        <h2 class="card__title">Ecommerce clone</h2>
+                        <div class="card__text">
+                            <p>
+                                My first e-commerce clone was made during a django course and it allow me to learn and deepen the understanding of databases and how to save users entries.
+                            </p>
+                            <p>
+                                Users are able to load an article with a starting price and a deadline. Other users could add it to watchlist or place bids, receive a notification in case they won the auction and be the only ones to see the article they won.
+                            </p>
+                        </div>
+                            
+                        <div class="card__links">
+                            <a class="btn-primary btn-small tooltip-video" href="https://happydungeon.quest" target="_blank">Video review</a>
+                            <a class="btn-secondary btn-small" target="_blank" href="https://github.com/Athryell/project-ecommerce">Github</a>
+                        </div>
                     </div>
-                    <a class="btn btn-primary btn-small">check it out <i class="fas fa-arrow-up-right-from-square"></i></a>
                 </div>
-                <div class="card">
-                    <h3 class="card__title">Social network clone</h3>
-                    <div class="card__tags">
-                        <span>Bootstrap</span>
+
+                <div class="card"> <!--  Mail -->
+                    <img class="card__img" src="./img/mail_placeholder.jpg" alt="homepage of happydungeon.quest website">
+                    <div class="card__inner">
+                        <h2 class="card__title">Mail service clone</h2>
+                        <div class="card__text">
+                            This was quite nice to build, not pretencious but functional, it works a lot with forms. Nothing too extreme but it highlights the unread mail, and if trying to reply it will auto populate the fields with the sender and the receiver.
+                        </div>
+
+                        <div class="card__links">
+                            <a class="btn-primary btn-small tooltip-video" href="https://www.youtube.com/watch?v=Tx5CAg_0D-M" target="_blank">Video review</a>
+                            <a class="btn-secondary btn-small" target="_blank" href="https://github.com/Athryell/project-mail.git">Github</a>
+                        </div>
                     </div>
-                    <a class="btn btn-primary btn-small">check it out <i class="fas fa-arrow-up-right-from-square"></i></a>
                 </div>
+
+                <div class="card"> <!-- Social -->
+                    <img class="card__img" src="./img/social_placeholder.jpg" alt="homepage of happydungeon.quest website">
+                    <div class="card__inner">
+                        <h2 class="card__title">Social network clone</h2>
+                        <div class="card__text">
+                            With this social network a user can like comments and if logged in can reply to other users and modify his own post without refreshing the whole page
+                        </div>
+
+                        <div class="card__links">
+                            <a class="btn-primary btn-small tooltip-video" href="https://www.youtube.com/watch?v=ykujKn69dFo" target="_blank">Video review</a>
+                            <a class="btn-secondary btn-small" target="_blank" href="https://github.com/Athryell/project-social.git">Github</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card"> <!-- Portfolio -->
+                    <img class="card__img" src="./img/portfolio_placeholder.jpg" alt="homepage of this portfolio">
+                    <div class="card__inner">
+                        <h2 class="card__title">My portfolio</h2>
+                        <div class="card__text">
+                            Every once in a while I come back and change my porfolio and try different things.
+                        </div>
+
+                        <div class="card__links">
+                            <a class="btn-secondary btn-small" target="_blank" href="https://github.com/Athryell/portfolio_v2">Github</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card"> <!-- Brain and body -->
+                    <img class="card__img" src="./img/brainandbody_placeholder.jpg" alt="homepage brain and body website">
+                    <div class="card__inner">
+                        <h2 class="card__title">Brain and body</h2>
+                        <div class="card__text">
+                            In this project I just try another database project, it was meant to give you different challenges and store your result in a database that could have been compared with other users and give statistic for each country.
+                        </div>
+
+                        <div class="card__links">
+                            <a class="btn-primary btn-small" href="https://www.youtube.com/watch?v=kDhFoDyLHao" target="_blank">Check it out</a>
+                            <a class="btn-secondary btn-small" target="_blank" href="https://github.com/Athryell/brain-and-body.git">Github</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card"> <!-- React -->
+                    <img class="card__img" src="./img/react_placeholder.jpg" alt="blurry picture">
+                    <div class="card__inner">
+                        <h2 class="card__title">React Project</h2>
+                        <div class="card__text">
+                            I'm looking forward for the next project! I'm <a class="link" href="#currently-learning">learning</a> react 
+                        </div>
+
+                        <div class="card__links">
+                            <a class="btn-primary btn-small disabled" tabindex="-1" href="#" target="_blank">Check it out</a>
+                            <a class="btn-secondary btn-small disabled" tabindex="-1" target="_blank" href="#">Github</a>
+                        </div>
+                    </div>
+                    <div class="card__below-1"></div>
+                    <div class="card__below-2"></div>
+                </div>
+                
             </div>
         </section>
 
         <!-- My codepen -->
-        <section class="section" id="codepen">
-            <h1 class="section__title">I like to play around</h1>
+        <!-- <section class="section" id="codepen" aria-labelledby="codepen__title">
+            <h1 class="section__title title-separator" id="codepen__title">I like to play around</h1>
             <div class="card-container">
                 <div class="card">
                     <h3 class="card__title">Dark/light theme toggle</h3>
                     <div class="card__codepen-example">
                         [STAR]
                     </div>
-                    <a class="btn btn-primary btn-small"><i class="fab fa-codepen"></i> Codepen</a>
+                    <a class="btn-primary btn-small"><i class="fab fa-codepen"></i> Codepen</a>
                 </div>
                 <div class="card">
                     <h3 class="card__title">Social network clone</h3>
                     <div class="card__codepen-example">
                         [HOVER]
                     </div>
-                    <a class="btn btn-primary btn-small"><i class="fab fa-codepen"></i> Codepen</a>
+                    <a class="btn-primary btn-small"><i class="fab fa-codepen"></i> Codepen</a>
                 </div>
             </div>
             
-        </section>
+        </section> -->
 
         <!-- Contact -->
-        <section class="section" id="contact">
+        <section class="section section--contact" aria-labelledby="contact__title" id="contact">
             <div class="article">
-                <h1 class="section__title">Get in touch!</h1>
+                <h1 class="section__title title-separator" id="contact__title">Get in touch!</h1>
                 <p>Feel free to contact me!</p>
                 <p>I’m always open to discuss new projects, creative ideas or opportunities to be a part of your vision.</p>
             </div>
 
-            <span class="my-mail"><i class="fas fa-envelope"></i> aleprovvi@yahoo.it</span>
+            <span class="my-mail"><i class="iconify-inline accent-primary" data-icon="fa6-solid:envelope"></i> aleprovvi@yahoo.it</span>
 
-            <form action="#" class="contact-form">
+            <form action="https://formsubmit.co/alessandro.provvisionato@hotmail.com" method="POST" class="contact-form">
+                <input type="hidden" name="_subject" value="New message from portfolio!">
+
                 <div class="contact__input-container">
-                    <input type="text" id="name" class="contact__input" autocomplete="off" placeholder=" ">
+                    <input type="text" id="name" name="name" class="contact__input" autocomplete="off" placeholder=" " required>
                     <label for="name" class="contact__label">
                         <span class="contact__text">Name</span>
                     </label>
                 </div>
 
                 <div class="contact__input-container">
-                    <input type="email" id="email" class="contact__input" autocomplete="off" placeholder=" ">
+                    <input type="email" id="email" name="email" class="contact__input" autocomplete="off" placeholder=" " required>
                     <label for="email" class="contact__label">
                         <span class="contact__text">Email</span>
                     </label>
+                    <div class="error-icon">
+                        <span class="iconify-inline" data-icon="ant-design:alert-filled"></span>
+                    </div>
+                    <span class="error-text"><small>Double check your email address</small></span>
                 </div>
 
                 <div class="contact__input-container">
-                    <textarea class="contact__input contact__input--textarea" type="text" cols="" rows=5" id="message" autocomplete="off" placeholder=" "></textarea>
+                    <textarea class="contact__input contact__input--textarea" type="text" name="message" rows="5" id="message" autocomplete="off" placeholder=" " required></textarea>
                     <label for="message" class="contact__label">
                         <span class="contact__text">Your message</span>
                     </label>
                 </div>
 
-                <button class="btn btn-primary btn-big" type="submit">Send <i class="fas fa-paper-plane"></i></button>
+                <button class="btn-primary btn-big" type="submit">Send <i class="iconify-inline" data-icon="fa6-solid:paper-plane"></i></button>
             </form>
 
         </section>
-
-        <footer class="footer">
-            <div class="footer__container">
-                <span class="made-by">Made by Alessandro Provvisionato</span>
-                <div class="social-icons">
-                    <span><i class="fab fa-codepen"></i></span>
-                    <span><i class="fab fa-github"></i></span>
-                </div>
-            </div>
-        </footer>
     </div>
+
+    <footer class="footer">
+        <div class="footer__container">
+            <span class="made-by">Made by Alessandro Provvisionato</span>
+            <div class="social-icons">
+                <a href="https://codepen.io/athryell" target="_blank"><i class="fab fa-codepen"></i></a>
+                <a href="https://github.com/Athryell" target="_blank"><i class="fab fa-github"></i></a>
+            </div>
+        </div>
+    </footer>
 
     <script src="js/main.js"></script>
 </body>

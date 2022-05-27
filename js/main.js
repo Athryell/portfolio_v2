@@ -1,8 +1,12 @@
 const menuToggle = document.querySelector('.menu-toggle')
 const navBar = document.querySelector('.navbar-menu')
 
-const twInputs = document.querySelectorAll('.tri-way-toggle__input')
-const twArr = [...twInputs]
+const toggleInput = document.querySelector('.toggle-services__input')
+const iconsContainer = document.querySelectorAll('.services__icons')
+const textContainer = document.querySelectorAll('.services__text')
+
+const inputAbout = document.querySelectorAll('.about__input')
+const aboutArticles = document.querySelectorAll('[data-length]')
 
 // Open-close phone navbar
 menuToggle.addEventListener('click', () => {
@@ -10,13 +14,47 @@ menuToggle.addEventListener('click', () => {
     menuToggle.classList.toggle('menu-toggle-open')
 })
 
-// Three way toggle manager
-twInputs.forEach(e => {
-    e.addEventListener('click', () => {
-        e.parentElement.style.color = 'var(--col-primary)'
+// Services manager: display icons
+toggleInput.addEventListener('change', (e) => {
+    if (e.target.checked) {
+        iconsContainer.forEach(iCont => { iCont.hidden = false; });
+        textContainer.forEach(tCont => { tCont.hidden = true; });
+    } else {
+        iconsContainer.forEach(iCont => { iCont.hidden = true; });
+        textContainer.forEach(tCont => { tCont.hidden = false; });
+    }
 
-        twArr
-            .filter((item) => { return item != e })
-            .forEach((item) => { item.parentElement.style.color = 'var(--col-lightest)' })
+})
+
+// About section checker
+inputAbout.forEach(e => {
+    e.addEventListener('click', (i) => {
+        aboutArticles.forEach(article => {
+            if (i.target.value === article.dataset.length) {
+                // article.style.display = 'block'
+                article.classList.add('reveal-about')
+            } else {
+                // article.style.display = 'none'
+                article.classList.remove('reveal-about')
+            }
+        });
     })
+});
+
+// Contacts email validator
+const email = document.getElementById('email')
+const errorIcon = document.querySelector('.error-icon')
+const errorText = document.querySelector('.error-text')
+
+email.addEventListener('blur', (e) => {
+    if (!(email.value.includes('@') && email.value.includes('.')) || email.value === '')
+    {
+        errorIcon.style.display = 'block'
+        errorText.style.display = 'block'
+    }
+})
+
+email.addEventListener('focus', () => {
+    errorIcon.style.display = 'none'
+    errorText.style.display = 'none'
 })

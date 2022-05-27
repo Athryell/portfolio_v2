@@ -1,0 +1,26 @@
+@use '../abstracts/colors' as *;
+@use '../abstracts/mixins' as *;
+
+.footer__container {
+    display: flex;
+    padding: 1rem 2rem;
+    justify-content: center;
+    align-items: center;
+    // max-width: 82rem;
+}
+
+.made-by {
+    display: none;
+}
+
+.social-icons > * {
+    padding-inline: 1rem;
+    color: var(--col-secondary);
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+@include for-tablet-portrait-up {
+    .footer__container { justify-content: space-between; }
+    .made-by { display: inline-block; }
+}

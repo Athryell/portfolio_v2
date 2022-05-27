@@ -1,0 +1,40 @@
+@use 'base' as *;
+@use 'abstracts' as *;
+@use 'utilities' as *;
+@use 'components/buttons' as *;
+
+.section__title {
+    display: inline-block;
+}
+
+.project__subtitle {
+    display: inline;
+    background-color: var(--col-secondary);
+    color: var(--col-dark);
+    font-weight: $fw-bold;
+    padding: 0.25rem 0.5rem;
+    border-radius: $br-m;
+    float: right;
+}
+
+.article__title {
+    color: var(--col-light);
+}
+
+.list-of-features {
+    text-align: left;
+}
+
+aside {
+    border-top: 1px solid var(--col-dark);
+}
+
+.aside__title {
+    font-size: var(--fs-body);
+}
+
+.aside__content {
+    color: var(--col-light);
+    font-size: var(--fs-small);
+
+}

@@ -54,6 +54,8 @@ select {
     font: inherit;
 }
 
+noscript { display: block;}
+
 @media (prefers-reduced-motion: reduce) {   
     html:focus-within {
         scroll-behavior: auto

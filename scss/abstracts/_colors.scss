@@ -2,16 +2,18 @@
     --col-primary: hsl(21, 99%, 50%);
     --col-primary-darker: hsl(21, 100%, 40%);
 
-    // --col-secondary-darkest:hsl(181, 100%, 13%);
-    // --col-secondary-dark: rgb(0, 95, 97);
     --col-secondary: hsl(180, 68%, 41%);
-    --col-secondary-base: hsl(180, 86%, 28%);
-    // --col-secondary-light: hsl(181, 61%, 52%);
-    // --col-secondary-lightest: hsl(180, 32%, 56%);
+    // --col-secondary-base: hsl(180, 86%, 28%);
 
     --col-darkest: hsl(191, 13%, 17%);
     --col-dark: hsl(188, 10%, 30%);
     --col-neutral: hsl(188, 6%, 50%);
     --col-light: hsl(187, 7%, 75%);
     --col-lightest: hsl(192, 6%, 85%);
+
+    // --col-error: hsl(0, 97%, 38%);
+    --col-error: hsl(0, 100%, 55%);
+    // --col-success: hsl(155, 95%, 37%);
+    // --col-warning: hsl(47, 93%, 52%);
+    // --col-info: hsl(204, 88%, 52%);
 }

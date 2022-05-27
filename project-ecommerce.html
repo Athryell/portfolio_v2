@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alex's portfolio</title>
+    <link rel="stylesheet" href="css/project.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <header class="header">
+        
+        <a class="skip-nav-link" href="#main-content">
+            Skip navigation
+        </a>
+
+        <div class="header__container">
+            <a href="./index.html">
+                <span class="name"> A&lt;/&gt;ex </span>
+            </a>
+            
+            <nav class="navbar-menu">
+                <ul class="menu" role="list">
+                    <li><a href="./index.html#services"><i class="fas fa-laptop-code"></i>Services</a></li>
+                    <li><a href="./index.html#about"><i class="fas fa-address-card"></i>About</a></li>
+                    <li><a href="./index.html#contact" class="btn btn-small btn-secondary" ><i class="fas fa-envelope"></i>Contact</a></li>
+                </ul>
+            </nav>
+            
+            <div class="menu-toggle">
+                <div></div>
+            </div>
+        </div>
+    </header>
+
+    <main class="container" id="main-content">
+        <section class="section" aria-label="E-commerce project">
+            <div class="section__title">
+                <h1>Eco-mmerce</h1>
+                <p class="project__subtitle">An e-commerce clone</p>
+            </div>
+
+            <article class="article">
+                <p>
+                    My first e-commerce clone was made during a django course and it allow me to learn and deepen the understanding of databases and how to save users entries.
+                </p>
+
+                <h2 class="article__title">Features:</h2>
+                <p>
+                    <ul class="list-of-features">
+                        <li>Allow users to load their articles, set a starting price and a deadline.</li>
+                        <li>Added a chance to close the auction at any moment before the deadline.</li>
+                        <li>Other users could bet on the article (only a higher value)</li>
+                        <li>They would receive a notification in case they won the bid and they would be able to see the closed auction</li>
+                        <li>Added a “watchlist” page to keep track of interesting articles</li>
+                        <li>Responsive design</li>
+                    </ul>
+                </p>
+                
+                <aside>
+                    <h1 class="aside__title"><em>Currently under beautification:</em></h1>
+                    <div class="aside__content">
+                        <p>
+                            At the time I was learning backend skills and I didn’t have a lot of CSS and design experience.
+                        </p>
+                        <p>
+                            I’d like to show you something at least not too ugly, but if you really want <a class="link" href="https://www.youtube.com/watch?v=gpOiC_vCS90" target="_blank">here</a> there is my very first video explanation of the project!
+                        </p>
+                    </div>
+                </aside>
+            </article>
+                
+                <a class="btn btn-disabled" href="#">Try the demo</a>
+                
+        </section>
+
+    </div>
+
+    <footer class="footer">
+        <div class="footer__container">
+            <span class="made-by">Made by Alessandro Provvisionato</span>
+            <div class="social-icons">
+                <a href="https://codepen.io/athryell" target="_blank"><i class="fab fa-codepen"></i></a>
+                <a href="https://github.com/Athryell" target="_blank"><i class="fab fa-github"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
