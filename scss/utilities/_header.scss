@@ -2,7 +2,6 @@
 @use '../base' as *;
 
 .header { 
-    // border-bottom: 1px solid var(--col-primary);
     background:
         linear-gradient(to left, var(--col-primary), var(--col-secondary))
         left bottom
@@ -32,7 +31,6 @@
     padding: 1rem 2rem;
     justify-content: space-between;
     align-items: center;
-    // max-width: 82rem;
 }
 
 .name { font-weight: $fw-bold; }
@@ -97,7 +95,7 @@
 
 }
 
-@include for-tablet-portrait-up {
+@include for-tablet-landscape-up {
     .header__container {
         padding: 1.5rem 4rem;
         

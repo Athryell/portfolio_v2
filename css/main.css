@@ -179,11 +179,6 @@ em {
     padding: 11.5rem 3.5rem;
   }
 }
-@media (min-width: 900px) {
-  .section {
-    padding: 11.5rem 12rem;
-  }
-}
 
 .section__title {
   position: relative;
@@ -219,6 +214,7 @@ em {
 }
 
 .container {
+  max-width: 56rem;
   max-width: 82rem;
   margin: 0 auto;
 }
@@ -313,7 +309,7 @@ em {
   clip-path: circle(140% at top right);
 }
 
-@media (min-width: 600px) {
+@media (min-width: 900px) {
   .header__container {
     padding: 1.5rem 4rem;
   }
@@ -359,6 +355,11 @@ em {
     display: none;
   }
 }
+.footer {
+  background: linear-gradient(to left, var(--col-secondary), var(--col-primary)) left top no-repeat;
+  background-size: 100% 1px;
+}
+
 .footer__container {
   display: flex;
   padding: 1rem 2rem;
@@ -370,7 +371,10 @@ em {
   display: none;
 }
 
-.social-icons > * {
+.social-icons {
+  margin-right: 4rem;
+}
+.social-icons a {
   padding-inline: 1rem;
   color: var(--col-secondary);
   font-size: 1.5rem;
@@ -433,7 +437,7 @@ em {
   position: fixed;
   z-index: 99;
   bottom: 1rem;
-  right: 1rem;
+  right: 2rem;
   padding: 0;
   border: 1px solid var(--col-neutral);
   border-radius: 0.25rem;
@@ -535,6 +539,11 @@ em {
   right: 1rem;
 }
 
+@media (min-width: 900px) {
+  .toggle-services {
+    margin-bottom: 2rem;
+  }
+}
 .knob:before {
   content: "TEXT";
   position: absolute;
@@ -634,11 +643,13 @@ em {
 }
 
 .section--hero {
-  padding: 8rem 2rem;
+  padding-block: 8rem;
 }
 
 .section__title--hero {
   font-weight: 700;
+  max-width: 50rem;
+  margin-inline: auto;
 }
 
 .hero__img {
@@ -657,6 +668,18 @@ em {
 @media (min-width: 600px) {
   .section__title--hero {
     text-align: left;
+  }
+}
+@media (min-width: 900px) {
+  .section__title--hero {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    align-items: center;
+  }
+
+  .hero__img {
+    display: block;
+    max-width: 10rem;
   }
 }
 .services__title {
@@ -680,7 +703,6 @@ em {
 }
 
 .services__icons {
-  text-align: center;
   font-size: var(--fs-h3);
 }
 .services__icons p {
@@ -709,6 +731,7 @@ em {
   top: 100%;
   left: 0;
   right: 0;
+  text-align: center;
   font-size: var(--fs-small);
   background-color: var(--col-dark);
   border-radius: 0.125rem;
@@ -721,6 +744,25 @@ em {
   transform: translateY(0);
 }
 
+@media (min-width: 900px) {
+  .services {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
+    gap: 1rem;
+  }
+  .services .article {
+    padding: 0.75rem 1em;
+    border-left: 1px solid var(--col-dark);
+  }
+  .services .services__title,
+.services .services__icons p {
+    text-align: left;
+  }
+  .services .services__icons p {
+    transform: translateX(-0.7rem);
+  }
+}
 .about-normal,
 .about-short,
 .about-long {
@@ -748,6 +790,12 @@ em {
     opacity: 1;
   }
 }
+@media (min-width: 900px) {
+  .article--about {
+    max-width: 55ch;
+    margin-inline: auto;
+  }
+}
 .disclaimer {
   margin-bottom: 3rem;
   text-align: left;
@@ -761,12 +809,14 @@ em {
 
 .card-container {
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(min(25rem, 100%), 1fr));
   padding-top: 1.5rem;
 }
 
 .card, .card__below, .card__below-2, .card__below-1 {
   position: relative;
+  display: flex;
+  flex-direction: column;
   border-radius: 0.5rem;
   margin-bottom: 3.5rem;
   margin-inline: auto;
@@ -781,6 +831,7 @@ em {
 }
 
 .card__inner {
+  flex-grow: 1;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -797,6 +848,9 @@ em {
   margin-block: 1.5rem;
 }
 
+.card__links {
+  margin-top: auto;
+}
 .card__links a:last-child {
   float: right;
 }
@@ -818,10 +872,18 @@ em {
   transform: rotate(5deg);
 }
 
+@media (min-width: 900px) {
+  .disclaimer {
+    max-width: 60ch;
+    margin-inline: auto;
+  }
+}
 .section--contact {
   border-bottom: none;
-  background: linear-gradient(to left, var(--col-secondary), var(--col-primary)) left bottom no-repeat;
-  background-size: 100% 1px;
+}
+.section--contact .article {
+  max-width: 70ch;
+  margin-inline: auto;
 }
 
 .envelope {
@@ -834,6 +896,8 @@ em {
 
 .contact-form {
   margin-top: 2rem;
+  max-width: 70ch;
+  margin-inline: auto;
 }
 
 .contact__textarea {
@@ -900,9 +964,14 @@ em {
 .error-text {
   position: absolute;
   right: 0;
-  top: 100;
+  top: 100%;
   color: var(--col-error);
   display: none;
+}
+@media (min-width: 600px) {
+  .error-text {
+    top: 95%;
+  }
 }
 
 @keyframes error {

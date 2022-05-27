@@ -38,12 +38,14 @@
     <main class="container" id="main-content">
         <!-- Hero -->
         <section class="section section--hero" id="hero" aria-labelledby="hero__title">
-            <div class="section__title section__title--hero" id="hero__title">
+            <div class="section__title section__title--hero">
+                <div id="hero__title">
                     <p>Hi there, I'm</p>
                     <h1>Alessandro</h1>
                     <p>a <em>curious</em> web developer</p>
+                </div>
+                <img class="hero__img" src="img/hero_img_placeholder.png" alt="Alex say hi">
             </div>
-            <img class="hero__img" src="img/hero_img_placeholder.png" alt="Alex say hi">
             <div class="hero__btn">
                 <a class="btn-primary" href="#work">See my work <i class="iconify-inline" data-icon="fa6-solid:arrow-turn-down"></i></a>
             </div>
@@ -114,22 +116,22 @@
                         </p>
                     </div>
                 </article>
-                
-                <article>
-                    <h3 id="currently-learning" class="services__title services__title--learning">Currently learning</h3>
-                    <div class="services__text">
-                        <p>React (it's fun!)</p>
-                        <p>Accessibility (a fan of)</p>
-                    </div>
-                    <div class="services__icons" hidden>
-                        <p>
-                            <span class="tooltip-wrapper" data-tooltip="React"><i class="iconify" data-icon="logos:react"></i></span>
-                            <span class="tooltip-wrapper" data-tooltip="Accessibility"><i class="iconify" data-icon="iconoir:accessibility"></i></span>
-                            
-                        </p>
-                    </div>
-                </article>
             </div>
+                
+            <article>
+                <h3 id="currently-learning" class="services__title services__title--learning">Currently learning</h3>
+                <div class="services__text">
+                    <p>React (it's fun!)</p>
+                    <p>Accessibility (a fan of)</p>
+                </div>
+                <div class="services__icons" hidden>
+                    <p>
+                        <span class="tooltip-wrapper" data-tooltip="React"><i class="iconify" data-icon="logos:react"></i></span>
+                        <span class="tooltip-wrapper" data-tooltip="Accessibility"><i class="iconify" data-icon="iconoir:accessibility"></i></span>
+                        
+                    </p>
+                </div>
+            </article>
         </section>
 
         <!-- About -->
@@ -156,7 +158,7 @@
                 </div>
             </div>
 
-            <article class="article">
+            <article class="article article--about">
                 <div class="about-short" data-length="short">
                     <p>I love to learn and build stuff.</p>
                     <p>That's it!</p>
@@ -172,9 +174,7 @@
                     <p>... quick fast-forward to a couple of years ago, when I realized I always loved to understand how the things are made to build them myself so I decided I wanted to learn a programming language in order to be able to build something from scratch. The easiest thing was starting building games (you can see something really simple here) and after my first game-jam i moved from building games in C# to learn Python and build some software.</p>
                     <p>From there the slipping into web development was really a matter of time, after the back end which satisfy my tecnical-skill-mind I landed on web design, which nourishes the amused-creative-child.</p>
                     <p>Ps: I did many jobs from security and self defence teacher to board-game seller, and I've always been curious</p>
-
                 </div>
-                
             </article>
 
         </section>
@@ -182,20 +182,20 @@
         <!-- My work -->
         <section class="section" id="work" aria-labelledby="work__title">
             <h1 class="section__title title-separator" id="work__title">My work</h1>
+            
+            <aside class="disclaimer">
+                <small>
+                    <h1 class="disclaimer__title">Disclaimer</h1>
+                    <p>
+                        Some of these project were only <em>back-end focused</em>, I didn’t have a lot of CSS and design experience at the time.
+                    </p>
+                    <p>
+                        I'm currently <em>beautifying</em> them so I can show you something a little bit nicer, but if you really want to see them in action I temporary linked some <em>video</em> with an overview of the projects!
+                    </p>
+                </small>
+            </aside>
+            
             <div class="card-container">
-
-                <aside class="disclaimer">
-                    <small>
-                        <h1 class="disclaimer__title">Disclaimer</h1>
-                        <p>
-                            Some of these project were only <em>back-end focused</em>, I didn’t have a lot of CSS and design experience at the time.
-                        </p>
-                        <p>
-                            I'm currently <em>beautifying</em> them so I can show you something a little bit nicer, but if you really want to see them in action I temporary linked some <em>video</em> with an overview of the projects!
-                        </p>
-                    </small>
-                </aside>
-
                 <div class="card"> <!-- Happy Dungeon -->
                     <img class="card__img" src="./img/happydungeon_placeholder.jpg" alt="homepage of happydungeon.quest website">
                     <div class="card__inner">
@@ -374,12 +374,10 @@
 
                 <button class="btn-primary btn-big" type="submit">Send <i class="iconify-inline paper-plane" data-icon="fa6-solid:paper-plane"></i></button>
             </form>
-
         </section>
 
         <button id="top-btn" title="Go to top"><span class="iconify-inline" data-icon="bytesize:chevron-top"></span></button>
-    </div>
-
+    </main>
 
     <footer class="footer">
         <div class="footer__container">

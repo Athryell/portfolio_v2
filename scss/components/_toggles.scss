@@ -52,6 +52,10 @@
     }
 }
 
+@include for-tablet-landscape-up {
+    .toggle-services { margin-bottom: 2rem; }
+}
+
 // Unchecked (Text selected) [X  ]
 .knob:before {
     content: 'TEXT';

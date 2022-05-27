@@ -6,11 +6,13 @@
 //* - - - - - - - - - - - - - - - - - HERO - - - - - - - - - - - - - - - - -
 
 .section--hero {
-    padding: 8rem 2rem;
+    padding-block: 8rem;
 }
 
 .section__title--hero {
     font-weight: $fw-bold;
+    max-width: 50rem;
+    margin-inline: auto;
 }
 
 .hero__img {
@@ -30,6 +32,19 @@
 @include for-tablet-portrait-up {
     .section__title--hero {
         text-align: left;
+    }
+}
+
+@include for-tablet-landscape-up {
+    .section__title--hero {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        align-items: center;
+    }
+
+    .hero__img {
+        display: block;
+        max-width: 10rem;
     }
 }
 
@@ -58,7 +73,6 @@
 }
 
 .services__icons {
-    text-align: center;
     font-size: var(--fs-h3);
 
     p {
@@ -90,6 +104,7 @@
         top: 100%;
         left: 0;
         right: 0;
+        text-align: center;
         font-size: var(--fs-small);
         background-color: var(--col-dark);
         border-radius: $br-s;
@@ -104,6 +119,30 @@
             transform: translateY(0);
         }
     }
+}
+
+@include for-tablet-landscape-up {
+    .services {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        justify-content: center;
+        gap: 1rem;
+
+        .article {
+            padding: 0.75rem 1em;
+            border-left: 1px solid var(--col-dark);
+            // border-radius: $br-l
+        }
+
+        .services__title,
+        .services__icons p {
+            text-align: left;
+        }
+
+        .services__icons p { transform: translateX(-0.7rem); }
+    }
+
+    
 }
 
 //* - - - - - - - - - - - - - - - - - ABOUT - - - - - - - - - - - - - - - - -
@@ -129,6 +168,13 @@
     100% {opacity: 1;}
 }
 
+@include for-tablet-landscape-up {
+    .article--about {
+        max-width: 55ch;
+        margin-inline: auto;
+    }
+}
+
 //* - - - - - - - - - - - - - - - - - MY WORK - - - - - - - - - - - - - - - - -
 
 .disclaimer {
@@ -145,12 +191,14 @@
 
 .card-container {
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(min(25rem, 100%), 1fr));
     padding-top: 1.5rem;
 }
 
 .card {
     position: relative;
+    display: flex;
+    flex-direction: column;
     border-radius: $br-l;
     margin-bottom: 3.5rem;
     margin-inline: auto;
@@ -165,12 +213,12 @@
     border-top-right-radius: $br-l;
 }
 
-.card__inner {  
+.card__inner {
+    flex-grow: 1;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     text-align: left;
-    // min-height: 20rem;
     padding: 1.5rem;
 }
 
@@ -186,6 +234,7 @@
 .card__links {
     // display: flex;
     // justify-content: space-between;
+    margin-top: auto;
 
     a:last-child {
         float: right;
@@ -213,7 +262,12 @@
     transform: rotate(5deg);
 }
 
-// .fa-arrow-up-right-from-square { margin-left: 0.5rem; }
+@include for-tablet-landscape-up {
+    .disclaimer { 
+        max-width: 60ch;
+        margin-inline: auto;
+    }
+}
 
 //* - - - - - - - - - - - - - - - - - CODEPEN - - - - - - - - - - - - - - - - -
 
@@ -225,11 +279,11 @@
 
 .section--contact {
     border-bottom: none;
-    background:
-        linear-gradient(to left,  var(--col-secondary), var(--col-primary))
-        left bottom
-        no-repeat;
-    background-size: 100% 1px;
+
+    .article {
+        max-width: 70ch;
+        margin-inline: auto;
+    }
 }
 
 .envelope { margin-right: 0.5em; }
@@ -240,6 +294,8 @@
     // display: flex;
     // flex-direction: column;
     margin-top: 2rem;
+    max-width: 70ch;
+    margin-inline: auto;
 }
 
 .contact__textarea {
@@ -307,9 +363,11 @@
 .error-text {
     position: absolute;
     right: 0;
-    top: 100;
+    top: 100%;
     color: var(--col-error);
     display: none;
+
+    @include for-tablet-portrait-up { top: 95% }
 }
 
 @keyframes error {

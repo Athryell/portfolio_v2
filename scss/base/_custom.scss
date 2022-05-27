@@ -35,10 +35,6 @@ em {
     @include for-tablet-portrait-up {
         padding: 11.5rem 3.5rem;
     }
-
-    @include for-tablet-landscape-up {
-        padding: 11.5rem 12rem;
-    }
 }
 
 .section__title {
