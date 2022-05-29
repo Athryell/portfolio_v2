@@ -160,8 +160,12 @@ body {
   color: var(--col-primary);
 }
 
-.link {
+.link-accent {
   color: var(--col-primary);
+  text-decoration: underline;
+}
+
+.link {
   text-decoration: underline;
 }
 
@@ -320,6 +324,9 @@ em {
     clip-path: initial;
     background-color: initial;
   }
+  .header__container .navbar-menu .iconify {
+    display: none;
+  }
   .header__container .menu {
     display: flex;
     align-items: center;
@@ -373,7 +380,7 @@ em {
 }
 
 .social-icons {
-  margin-right: 4rem;
+  margin-inline: 4rem;
 }
 .social-icons a {
   padding-inline: 1rem;
@@ -727,7 +734,7 @@ em {
 }
 .tooltip-wrapper::after {
   position: absolute;
-  z-index: 2;
+  z-index: 10;
   content: attr(data-tooltip);
   top: 100%;
   left: 0;
@@ -735,10 +742,32 @@ em {
   text-align: center;
   font-size: var(--fs-small);
   background-color: var(--col-dark);
+  color: var(--col-lightest);
   border-radius: 0.125rem;
   opacity: 0;
   transform: translateY(5px);
   transition: opacity 0.3s, transform 0.5s ease-out;
+}
+.tooltip-wrapper[data-tooltip=Webflow] {
+  color: #465bfb;
+}
+.tooltip-wrapper[data-tooltip=jQuery] {
+  color: #106bad;
+}
+.tooltip-wrapper[data-tooltip=Responsive] {
+  color: var(--col-lightest);
+}
+.tooltip-wrapper[data-tooltip=Github] {
+  color: black;
+}
+.tooltip-wrapper[data-tooltip="User Experience"] {
+  text-decoration: underline;
+  cursor: help;
+}
+.tooltip-wrapper[data-tooltip="User Experience"]::after {
+  top: -150%;
+  left: -100%;
+  right: -100%;
 }
 .tooltip-wrapper:hover::after {
   opacity: 1;
@@ -847,6 +876,9 @@ em {
 
 .card__text {
   margin-block: 1.5rem;
+}
+.card__text p {
+  margin-bottom: 1.5rem;
 }
 
 .card__links {

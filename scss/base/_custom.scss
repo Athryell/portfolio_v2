@@ -17,10 +17,12 @@ body {
 
 .accent-primary { color: var(--col-primary); }
 
-.link {
+.link-accent {
     color: var(--col-primary);
     text-decoration: underline;
 }
+
+.link { text-decoration: underline; }
 
 em {
     color: var(--col-secondary);
