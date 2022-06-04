@@ -8,6 +8,9 @@ const textContainer = document.querySelectorAll('.services__text')
 const inputAbout = document.querySelectorAll('.about__input')
 const aboutArticles = document.querySelectorAll('[data-length]')
 
+const goTopButton = document.getElementById('top-btn')
+const header = document.getElementById('header')
+
 window.addEventListener('load', () => {
     if (window.location.href.includes('#success-text')) {
         const successAlert = document.getElementById('success-text')
@@ -71,18 +74,7 @@ email.addEventListener('focus', () => {
     errorText.style.display = 'none'
 })
 
-// - - - - - - - - - - GO TOP BUTTON - - - - - - - - - -
-
-const goTopButton = document.getElementById('top-btn')
-
-goTopButton.addEventListener('click', () => {
-    document.body.scrollTop = 0; // For Safari
-    document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
-})
-
 // - - - - - - - - - - OBSERVER - - - - - - - - - -
-
-const header = document.querySelector('.header')
 
 const options = {
     root: null,

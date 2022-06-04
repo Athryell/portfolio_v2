@@ -209,7 +209,7 @@
 
 .card-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(min(25rem, 100%), 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(min(24rem, 100%), 1fr));
     padding-top: 1.5rem;
 }
 
@@ -220,7 +220,7 @@
     border-radius: $br-l;
     margin-bottom: 3.5rem;
     margin-inline: auto;
-    max-width: 20rem;
+    max-width: 22rem;
     background-color: var(--col-darkest);
     box-shadow: 11px 11px 11px 0px hsla(189, 11%, 12%, 1),
                 -11px -11px 11px 0px hsla(192, 13%, 22%, 1);
