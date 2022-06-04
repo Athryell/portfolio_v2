@@ -23,10 +23,10 @@
             
             <nav class="navbar-menu">
                 <ul class="menu" role="list">
-                    <li><a href="#services"><i class="iconify-inline" data-icon="bi:list-check"></i>What I do</a></li>
-                    <li><a href="#about"><i class="iconify-inline" data-icon="fa6-solid:id-card"></i>Who I am</a></li>
-                    <li><a href="#work"><i class="iconify-inline" data-icon="fa6-solid:laptop-code"></i></i></i>My work</a></li>
-                    <li><a href="#contact" class="btn-small btn-secondary"><i class="iconify-inline" data-icon="fa6-solid:envelope"></i>Contact</a></li>
+                    <li><a href="#services-link"><i class="iconify-inline" data-icon="bi:list-check"></i>What I do</a></li>
+                    <li><a href="#about-link"><i class="iconify-inline" data-icon="fa6-solid:id-card"></i>Who I am</a></li>
+                    <li><a href="#work-link"><i class="iconify-inline" data-icon="fa6-solid:laptop-code"></i></i></i>My work</a></li>
+                    <li><a href="#contact-link" class="btn-small btn-secondary"><i class="iconify-inline" data-icon="fa6-solid:envelope"></i>Contact</a></li>
                 </ul>
             </nav>
             
@@ -51,12 +51,12 @@
             <noscript><small>You need to enable JavaScript to unleash the full power of this website (sorry)</small></noscript>
 
             <div class="hero__btn">
-                <a class="btn-primary" href="#work">See my work <i class="iconify-inline" data-icon="fa6-solid:arrow-turn-down"></i></a>
+                <a class="btn-primary" href="#work-link">See my work <i class="iconify-inline" data-icon="fa6-solid:arrow-turn-down"></i></a>
             </div>
         </section>
         
         <!-- Services -->
-        <section class="section" id="services" aria-labelledby="services__title">
+        <section class="section" aria-labelledby="services__title">
             <h1 class="section__title title-separator" id="services__title">What I do</h1>
 
             <div class="toggle-services">
@@ -66,7 +66,7 @@
                 </label>
             </div>
             
-            <div class="services">
+            <div class="services" id="services-link">
                 <article class="article">
                     <h2 class="services__title">Front-end</h2>
                     <div class="services__text">
@@ -154,7 +154,7 @@
         </section>
 
         <!-- About -->
-        <section class="section" id="about" aria-labelledby="about_title">
+        <section class="section" aria-labelledby="about_title">
             <h1 class="section__title title-separator" id="about_title">Who am I</h1>
 
             <div class="about__toggle-container">
@@ -177,7 +177,7 @@
                 </div>
             </div>
 
-            <article class="article article--about">
+            <article class="article article--about" id="about-link">
                 <div class="about-short" data-length="short">
                     <p>I love to learn, challenge myself and build stuff.</p>
                     <p>That's it!</p>
@@ -201,10 +201,10 @@
         </section>
 
         <!-- My work -->
-        <section class="section" id="work" aria-labelledby="work__title">
+        <section class="section" aria-labelledby="work__title">
             <h1 class="section__title title-separator" id="work__title">My work</h1>
             
-            <aside class="disclaimer">
+            <aside class="disclaimer" id="work-link">
                 <small>
                     <h1 class="disclaimer__title">Disclaimer</h1>
                     <p>
@@ -248,7 +248,7 @@
                         </div>
                             
                         <div class="card__links">
-                            <a class="btn-primary btn-small tooltip-video" href="https://happydungeon.quest" target="_blank">Video review</a>
+                            <a class="btn-primary btn-small tooltip-video" href="https://www.youtube.com/watch?v=gpOiC_vCS90" target="_blank">Video review</a>
                             <a class="btn-secondary btn-small" target="_blank" href="https://github.com/Athryell/project-ecommerce">Github</a>
                         </div>
                     </div>
@@ -338,7 +338,7 @@
         </section>
 
         <!-- Contact -->
-        <section class="section section--contact" aria-labelledby="contact__title" id="contact">
+        <section class="section section--contact" aria-labelledby="contact__title">
             <span id="success-text" class="success-text">Message successfully sent!</span>
             
             <div class="article">
@@ -349,7 +349,7 @@
 
             <span class="my-mail"><i class="iconify-inline envelope accent-primary" data-icon="fa6-solid:envelope"></i>alessandro.provvisionato@hotmail.com</span>
 
-            <form action="https://formsubmit.co/alessandro.provvisionato@hotmail.com" method="POST" class="contact-form">
+            <form id="contact-link" class="contact-form" action="https://formsubmit.co/alessandro.provvisionato@hotmail.com" method="POST">
                 <input type="hidden" name="_subject" value="New message from portfolio!">
                 <input type="hidden" name="_next" value="https://alepro.netlify.com#success-text">
 

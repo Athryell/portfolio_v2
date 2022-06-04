@@ -1,7 +1,7 @@
 @use '../base' as *;
 @use '../abstracts/mixins' as *;
 
-//* TRI TOGGLE 
+//* SERVICES SWITCHER
 
 .toggle-services__input {
     position: absolute;
@@ -20,10 +20,14 @@
     margin-bottom: 1.5rem;
     overflow: hidden;
 
-    @include for-tablet-portrait-up {
-        width: 11rem;
+    &:hover {
+        .toggle-services__label {
+            &::after, &::before {
+                color: var(--col-neutral);
+            }
+        }
     }
-
+    
     &__label {
         position: relative;
         display: inline-block;
@@ -38,23 +42,24 @@
             line-height: var(--lh-body);
             color: var(--col-dark);
             transform: translateY(-50%);
+            transition: color 0.2s ease-out;
         }
-
+        
         &::before {
             content: 'TEXT';
             left: 1.25rem;
         }
-
+        
         &::after {
             content: 'ICONS';
             right: 1rem;
         }
     }
+
+    @include for-tablet-portrait-up { width: 11rem; }
+    @include for-tablet-landscape-up { margin-bottom: 2rem; }
 }
 
-@include for-tablet-landscape-up {
-    .toggle-services { margin-bottom: 2rem; }
-}
 
 // Unchecked (Text selected) [X  ]
 .knob:before {
@@ -91,78 +96,7 @@
     left: 50%;
 }
 
-
-
-
-
-
-
-
-// .tri-way-toggle {
-//     border: 1px solid var(--col-dark);
-//     border-radius: $br-m;
-
-//     &__label {
-//         position: relative;
-//         display: inline-block;
-//         padding: 0.5rem 0.75rem;
-//         text-transform: uppercase;
-//         min-width: 4rem;
-//         text-align: center;
-//         cursor: pointer;
-//         transition: color 0.25s ease-out;
-
-//         &--text {
-//             color: var(--col-primary)
-//         }
-//     }
-
-//     &__label + &__label {
-//         &::before {
-//             content: '';
-//             position: absolute;
-//             top: 50%;
-//             left: 0;
-//             height: 1em;
-//             border-radius: $br-s;
-//             transform: translateY(-50%);
-//             width: 1px;
-//             background-color: var(--col-dark);
-//         }
-//     }
-    
-//     &__input {
-//         position: absolute;
-//         z-index: -1;
-//         top: -0.2em;
-//         right: -0.2em;
-//         left: -0.3em;
-//         bottom: 0;
-//         appearance: none;
-//         background-color: black;
-//         border-radius: $br-m;
-//         opacity: 0;
-//         transition: opacity 0.4s ease-out;
-
-//         &:hover {
-//             opacity: 0.4;
-//         }
-//     }
-// }
-
-// .services__icons {
-//     margin-top: 1rem;
-
-//     p {
-//         text-align: center;
-
-//         .iconify {
-//             margin-inline: 1rem;
-//         }
-//     }
-// }
-
-//* TOGGLE ABOUT
+//* BIO LENGTH TOGGLE
 
 .about__legend {
     text-transform: uppercase;

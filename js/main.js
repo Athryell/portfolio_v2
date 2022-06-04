@@ -29,6 +29,13 @@ menuToggle.addEventListener('click', () => {
     menuToggle.classList.toggle('menu-toggle-open')
 })
 
+document.addEventListener("click", (e) => {
+    if (!['menu-toggle'].some(el => e.target.classList.contains(el))) {
+        navBar.classList.remove('nav-open')
+        menuToggle.classList.remove('menu-toggle-open')
+    }
+})
+
 // Services manager: display icons
 toggleInput.addEventListener('change', (e) => {
     if (e.target.checked) {

@@ -147,6 +147,7 @@ small {
 
 html {
   font-size: 16px;
+  scroll-padding-top: 15rem;
 }
 
 body {
@@ -270,6 +271,7 @@ em {
   margin-block: 0.25rem;
   background-color: var(--col-lightest);
   transition: ease-out 0.3s;
+  pointer-events: none;
 }
 
 .menu-toggle-open::before {
@@ -304,14 +306,15 @@ em {
 .navbar-menu li:last-child {
   border-bottom: 0;
 }
-.navbar-menu li:hover {
-  background-color: var(--col-darkest);
-}
 .navbar-menu a {
   text-transform: uppercase;
   position: relative;
   padding: 1rem 2rem;
   display: block;
+  border-radius: 0.25rem;
+}
+.navbar-menu a:hover {
+  background-color: var(--col-darkest);
 }
 
 .nav-open {
@@ -344,8 +347,14 @@ em {
   .header__container .menu a {
     padding: 0;
   }
+  .header__container .menu a:hover {
+    background-color: initial;
+  }
   .header__container .menu a.btn-small {
     padding: 0.24rem 0.75rem;
+  }
+  .header__container .menu a.btn-small:hover {
+    background-color: var(--col-dark);
   }
   .header__container .menu a::after {
     content: "";
@@ -384,13 +393,18 @@ em {
 }
 
 .social-icons {
-  margin-inline: 4rem;
+  margin-inline: min(2.5rem, 10%);
 }
 .social-icons a {
+  display: inline-block;
   padding-inline: 1rem;
   color: var(--col-secondary);
   font-size: 1.5rem;
   cursor: pointer;
+  transition: transform 0.2s ease-out;
+}
+.social-icons a:hover {
+  transform: scale(1.2);
 }
 
 @media (min-width: 600px) {
@@ -412,6 +426,7 @@ em {
   font-size: 0.875rem;
   line-height: var(--lh-body);
   cursor: pointer;
+  transition: background-color 200ms;
 }
 .btn-primary {
   background-color: var(--col-primary);
@@ -427,7 +442,7 @@ em {
   border: 2px solid var(--col-primary);
 }
 .btn-secondary:hover {
-  background-color: rgba(255, 255, 255, 0.2);
+  background-color: var(--col-dark);
 }
 
 .disabled {
@@ -522,10 +537,8 @@ em {
   margin-bottom: 1.5rem;
   overflow: hidden;
 }
-@media (min-width: 600px) {
-  .toggle-services {
-    width: 11rem;
-  }
+.toggle-services:hover .toggle-services__label::after, .toggle-services:hover .toggle-services__label::before {
+  color: var(--col-neutral);
 }
 .toggle-services__label {
   position: relative;
@@ -541,6 +554,7 @@ em {
   line-height: var(--lh-body);
   color: var(--col-dark);
   transform: translateY(-50%);
+  transition: color 0.2s ease-out;
 }
 .toggle-services__label::before {
   content: "TEXT";
@@ -550,12 +564,17 @@ em {
   content: "ICONS";
   right: 1rem;
 }
-
+@media (min-width: 600px) {
+  .toggle-services {
+    width: 11rem;
+  }
+}
 @media (min-width: 900px) {
   .toggle-services {
     margin-bottom: 2rem;
   }
 }
+
 .knob:before {
   content: "TEXT";
   position: absolute;

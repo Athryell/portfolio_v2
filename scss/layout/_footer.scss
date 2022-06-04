@@ -21,13 +21,17 @@
 }
 
 .social-icons {
-    margin-inline: 4rem;
+    margin-inline: min(2.5rem, 10%);
 
     a {
+        display: inline-block;
         padding-inline: 1rem;
         color: var(--col-secondary);
         font-size: 1.5rem;
         cursor: pointer;
+        transition: transform 0.2s ease-out;
+
+        &:hover { transform: scale(1.2); }
     }
 }
 

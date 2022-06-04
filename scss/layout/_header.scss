@@ -48,6 +48,7 @@
         margin-block: $br-m;
         background-color: var(--col-lightest);
         transition: ease-out 0.3s;
+        pointer-events: none;
     }
 }
 
@@ -80,17 +81,16 @@
         &:last-child {
             border-bottom: 0;
         }
-
-        &:hover {
-            background-color: var(--col-darkest);
-        }
     }
-
+    
     a {
         text-transform: uppercase;
         position: relative;
         padding: 1rem 2rem;
         display: block;
+        border-radius: $br-m;
+
+        &:hover { background-color: var(--col-darkest); }
     }
 }
 
@@ -128,7 +128,13 @@
             a {
                 padding: 0;
 
-                &.btn-small { padding: 0.24rem 0.75rem; }
+                &:hover { background-color: initial;}
+
+                &.btn-small {
+                    padding: 0.24rem 0.75rem;
+
+                    &:hover { background-color: var(--col-dark);}
+                }
 
                 &::after {
                     content: '';
