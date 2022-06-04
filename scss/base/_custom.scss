@@ -33,6 +33,7 @@ em {
     padding: 5rem 2rem;
     border-bottom: 1px solid var(--col-dark);
     text-align: center;
+    text-align: -webkit-center;
 
     @include for-tablet-portrait-up {
         padding: 11.5rem 3.5rem;

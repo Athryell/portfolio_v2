@@ -80,6 +80,10 @@
         &:last-child {
             border-bottom: 0;
         }
+
+        &:hover {
+            background-color: var(--col-darkest);
+        }
     }
 
     a {
@@ -91,7 +95,7 @@
 }
 
 .nav-open {
-    clip-path: circle(140% at top right);
+    clip-path: circle(145% at top right);
 
 }
 

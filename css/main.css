@@ -20,7 +20,7 @@ ol[role=list] {
   padding: 0;
 }
 
-html:focus-within {
+html {
   scroll-behavior: smooth;
 }
 
@@ -178,6 +178,7 @@ em {
   padding: 5rem 2rem;
   border-bottom: 1px solid var(--col-dark);
   text-align: center;
+  text-align: -webkit-center;
 }
 @media (min-width: 600px) {
   .section {
@@ -303,6 +304,9 @@ em {
 .navbar-menu li:last-child {
   border-bottom: 0;
 }
+.navbar-menu li:hover {
+  background-color: var(--col-darkest);
+}
 .navbar-menu a {
   text-transform: uppercase;
   position: relative;
@@ -311,7 +315,7 @@ em {
 }
 
 .nav-open {
-  clip-path: circle(140% at top right);
+  clip-path: circle(145% at top right);
 }
 
 @media (min-width: 900px) {
