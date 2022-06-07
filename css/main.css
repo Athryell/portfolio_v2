@@ -334,6 +334,9 @@ em {
   .header__container .navbar-menu .iconify {
     display: none;
   }
+  .header__container .navbar-menu li {
+    border-bottom: none;
+  }
   .header__container .menu {
     display: flex;
     align-items: center;
