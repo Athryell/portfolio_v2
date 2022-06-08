@@ -19,7 +19,7 @@
 
         <div class="header__container">
             <a href="./index.html">
-                <span class="name" aria-label="Logo"> A&lt;/&gt;ex </span>
+                <span class="name"> A&lt;/&gt;ex </span>
             </a>
             
             <div class="menu-toggle">
@@ -30,7 +30,7 @@
                 <ul class="menu" role="list">
                     <li><a class="nav-link" href="#services-link"><i class="iconify-inline" data-icon="bi:list-check"></i>What I do</a></li>
                     <li><a class="nav-link" aria-label="Who I am" href="#about-link"><i class="iconify-inline" data-icon="fa6-solid:id-card"></i>Who I am</a></li>
-                    <li><a class="nav-link" href="#work-link"><i class="iconify-inline" data-icon="fa6-solid:laptop-code"></i></i></i>My work</a></li>
+                    <li><a class="nav-link" href="#work-link"><i class="iconify-inline" data-icon="fa6-solid:laptop-code"></i>My work</a></li>
                     <li><a class="btn-small btn-secondary nav-link" href="#contact-link" ><i class="iconify-inline" data-icon="fa6-solid:envelope"></i>Contact</a></li>
                 </ul>
             </nav>
@@ -134,7 +134,7 @@
             </div>
                 
             <article>
-                <h2 id="currently-learning" class="services__title services__title--learning">Currently learning</h3>
+                <h2 id="currently-learning" class="services__title services__title--learning">Currently learning</h2>
                 <div class="services__text">
                     <p>Library: React</p>
                     <p>UX: Accessibility (super important)</p>
@@ -155,7 +155,7 @@
             <h1 class="section__title title-separator" id="about_title">Who am I</h1>
 
             <div class="about__toggle-container">
-                <legend class="about__legend"><small>Adjust bio length</small></legend>
+                <p class="about__legend"><small>Adjust bio length</small></p>
                 <div class="toggler toggler__about">
                     <label class="about__label">
                         <small>Short</small>
@@ -183,7 +183,7 @@
                     <p>I'm a junior developer and I recently started my journey as a full-stack web developer.</p>
                     <p>I'm a self-motivated learner with huge passion and an endless curiosity.</p>
                     <p>I'm able to work independently & collaboratively in a team with a meticulous attention to detail.</p>
-                    <p>I'm not afraid of challenges, I like to get out of the comfort zone because it allows me to improve and evolve</p>
+                    <p>I'm not afraid of challenges, I like to get out of the comfort zone because it allows me to improve and evolve.</p>
                 </div>
                 <div class="about-long" data-length="long">
                     <p>Everything started when my mother met my father...</p>
@@ -202,15 +202,15 @@
             <h1 class="section__title title-separator" id="work__title">My work</h1>
             
             <aside class="disclaimer" id="work-link">
-                <small>
-                    <h2 class="disclaimer__title">Disclaimer</h2>
+                <h2 class="disclaimer__title">Disclaimer</h2>
+                <div class="disclaimer__text">
                     <p>
                         Some of these project were only <em>back-end focused</em>, I didn’t have a lot of CSS and design experience at the time.
                     </p>
                     <p>
                         I'm currently <em>beautifying</em> them so I can show you something a little bit nicer, but if you really want to see them in action I temporary linked some <em>video</em> with an overview of the projects!
                     </p>
-                </small>
+                </div>
             </aside>
             
             <div class="card-container">
@@ -284,7 +284,7 @@
                     </div>
                 </div>
 
-                <div loading="lazy" class="card"> <!-- Social -->
+                <div class="card"> <!-- Social -->
                     <picture>
                         <source type="image/webp" srcset="./img/social_tn.webp">
                         <source type="image/jpeg" srcset="./img/social_tn.jpg">
@@ -406,7 +406,7 @@
                 </div>
 
                 <div class="contact__input-container">
-                    <textarea class="contact__input contact__input--textarea" type="text" name="message" rows="5" id="message" autocomplete="off" placeholder=" " required></textarea>
+                    <textarea class="contact__input contact__input--textarea" name="message" rows="5" id="message" autocomplete="off" placeholder=" " required></textarea>
                     <label for="message" class="contact__label">
                         <span class="contact__text">Your message</span>
                     </label>

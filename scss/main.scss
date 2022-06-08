@@ -203,6 +203,11 @@
         text-align: center;
         color: var(--col-primary)
     }
+
+    .disclaimer__text {
+        font-size: var(--fs-small);
+        line-height: var(--lh-small);
+    }
 }
 
 .card-container {

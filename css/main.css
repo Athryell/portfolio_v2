@@ -860,6 +860,10 @@ em {
   text-align: center;
   color: var(--col-primary);
 }
+.disclaimer .disclaimer__text {
+  font-size: var(--fs-small);
+  line-height: var(--lh-small);
+}
 
 .card-container {
   display: grid;
