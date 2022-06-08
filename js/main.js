@@ -1,5 +1,6 @@
 const menuToggle = document.querySelector('.menu-toggle')
 const navBar = document.querySelector('.navbar-menu')
+const navItems = document.querySelectorAll('.nav-link')
 
 const toggleInput = document.querySelector('.toggle-services__input')
 const iconsContainer = document.querySelectorAll('.services__icons')
@@ -25,16 +26,33 @@ window.addEventListener('load', () => {
 
 // Open-close phone navbar
 menuToggle.addEventListener('click', () => {
-    navBar.classList.toggle('nav-open')
-    menuToggle.classList.toggle('menu-toggle-open')
+    openNavbar()
 })
+
+navItems.forEach(i => {
+    i.addEventListener('focus', () => {
+        openNavbar()
+    })
+    i.addEventListener('blur', () => {
+        closeNavbar()
+    })
+});
 
 document.addEventListener("click", (e) => {
     if (!['menu-toggle'].some(el => e.target.classList.contains(el))) {
-        navBar.classList.remove('nav-open')
-        menuToggle.classList.remove('menu-toggle-open')
+        closeNavbar()
     }
 })
+
+function openNavbar() {
+    navBar.classList.add('nav-open')
+    menuToggle.classList.add('menu-toggle-open')
+}
+
+function closeNavbar() {
+    navBar.classList.remove('nav-open')
+    menuToggle.classList.remove('menu-toggle-open')
+}
 
 // Services manager: display icons
 toggleInput.addEventListener('change', (e) => {

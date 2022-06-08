@@ -231,7 +231,7 @@ em {
   background-size: 100% 1px;
 }
 
-.skip-nav-link {
+.skip-link {
   position: absolute;
   z-index: 3;
   opacity: 0.8;
@@ -242,7 +242,7 @@ em {
   transform: translateY(-120%);
   transition: transform 0.3s ease-in;
 }
-.skip-nav-link:focus {
+.skip-link:focus {
   transform: translateY(0);
 }
 
@@ -313,7 +313,7 @@ em {
   display: block;
   border-radius: 0.25rem;
 }
-.navbar-menu a:hover {
+.navbar-menu a:hover, .navbar-menu a:focus {
   background-color: var(--col-darkest);
 }
 

@@ -9,7 +9,7 @@
     background-size: 100% 1px ;
 }
 
-.skip-nav-link {
+.skip-link {
     position: absolute;
     z-index: 3;
     opacity: 0.8;
@@ -90,7 +90,7 @@
         display: block;
         border-radius: $br-m;
 
-        &:hover { background-color: var(--col-darkest); }
+        &:hover, &:focus { background-color: var(--col-darkest); }
     }
 }
 
