@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alex's portfolio</title>
+    <meta name="description" content="Hi there! I'm Alex, a junior full-stack web developer. I might be the one you are looking for so why not taking a look at my portfolio? See you there!">
+    <title>Alessandro Provvisionato's portfolio</title>
     <link rel="icon" type="image/x-icon" href="/img/favicon.png">
     <link rel="stylesheet" href="css/main.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/iconify/2.2.1/iconify.min.js" integrity="sha512-sU5Gzc108d8ERAXEUoNh3DZQ3GZCQyygVkeuhIxFR+D9Go8kLw3Ce3HVD/AI5cnhGzW7Km9V4oOOiepKcD0vlg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
@@ -18,7 +19,7 @@
 
         <div class="header__container">
             <a href="./index.html">
-                <span class="name"> A&lt;/&gt;ex </span>
+                <span class="name" aria-label="Logo"> A&lt;/&gt;ex </span>
             </a>
             
             <div class="menu-toggle">
@@ -28,7 +29,7 @@
             <nav class="navbar-menu">
                 <ul class="menu" role="list">
                     <li><a class="nav-link" href="#services-link"><i class="iconify-inline" data-icon="bi:list-check"></i>What I do</a></li>
-                    <li><a class="nav-link" href="#about-link"><i class="iconify-inline" data-icon="fa6-solid:id-card"></i>Who I am</a></li>
+                    <li><a class="nav-link" aria-label="Who I am" href="#about-link"><i class="iconify-inline" data-icon="fa6-solid:id-card"></i>Who I am</a></li>
                     <li><a class="nav-link" href="#work-link"><i class="iconify-inline" data-icon="fa6-solid:laptop-code"></i></i></i>My work</a></li>
                     <li><a class="btn-small btn-secondary nav-link" href="#contact-link" ><i class="iconify-inline" data-icon="fa6-solid:envelope"></i>Contact</a></li>
                 </ul>
@@ -133,7 +134,7 @@
             </div>
                 
             <article>
-                <h3 id="currently-learning" class="services__title services__title--learning">Currently learning</h3>
+                <h2 id="currently-learning" class="services__title services__title--learning">Currently learning</h3>
                 <div class="services__text">
                     <p>Library: React</p>
                     <p>UX: Accessibility (super important)</p>
@@ -202,7 +203,7 @@
             
             <aside class="disclaimer" id="work-link">
                 <small>
-                    <h1 class="disclaimer__title">Disclaimer</h1>
+                    <h2 class="disclaimer__title">Disclaimer</h2>
                     <p>
                         Some of these project were only <em>back-end focused</em>, I didn’t have a lot of CSS and design experience at the time.
                     </p>
@@ -422,9 +423,10 @@
         <div class="footer__container">
             <span class="made-by">Made by Alessandro Provvisionato</span>
             <div class="social-icons">
-                <a href="https://codepen.io/athryell" target="_blank"><i class="iconify-inline" data-icon="cib:codepen"></i></a>
-                <a href="https://github.com/Athryell" target="_blank"><i class="iconify-inline" data-icon="cib:github"></i></a>
-                <a href="https://athryell.itch.io" target="_blank"><i class="iconify-inline" data-icon="fa-brands:itch-io"></i></a>
+                <a aria-label="Codepen" href="https://codepen.io/athryell" target="_blank"><i class="iconify-inline" data-icon="cib:codepen"></i></a>
+                <a aria-label="Github" href="https://github.com/Athryell" target="_blank"><i class="iconify-inline" data-icon="cib:github"></i></a>
+                <a aria-label="itch.io" href="https://athryell.itch.io" target="_blank"><i class="iconify-inline" data-icon="fa-brands:itch-io"></i></a>
+                <!-- <a aria-label="Curriculum Vitae" href="#" target="_blank"><i class="iconify-inline" data-icon="academicons:cv-square"></i></a> -->
             </div>
         </div>
     </footer>
