@@ -26,7 +26,8 @@ window.addEventListener('load', () => {
 
 // Open-close phone navbar
 menuToggle.addEventListener('click', () => {
-    openNavbar()
+    navBar.classList.toggle('nav-open')
+    menuToggle.classList.toggle('menu-toggle-open')
 })
 
 navItems.forEach(i => {
