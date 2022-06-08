@@ -6,10 +6,6 @@
 
 //* - - - - - - - - - - - - - - - - - HERO - - - - - - - - - - - - - - - - -
 
-.section--hero {
-    padding-block: 8rem;
-}
-
 .section__title--hero {
     font-weight: $fw-bold;
     max-width: 50rem;
@@ -362,7 +358,10 @@
     letter-spacing: 0.1em;
 }
 
-.paper-plane { margin-left: 0.5em; }
+.paper-plane {
+    margin-left: 0.25em;
+    font-size: 0.7em;
+}
 
 .success-text {
     display: none;

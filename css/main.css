@@ -183,7 +183,7 @@ em {
 }
 @media (min-width: 600px) {
   .section {
-    padding: 11.5rem 3.5rem;
+    padding: 8rem 3.5rem;
   }
 }
 
@@ -676,10 +676,6 @@ em {
   transform: translate(-50%, -50%) rotate(-45deg) scale(0);
 }
 
-.section--hero {
-  padding-block: 8rem;
-}
-
 .section__title--hero {
   font-weight: 700;
   max-width: 50rem;
@@ -1006,7 +1002,8 @@ em {
 }
 
 .paper-plane {
-  margin-left: 0.5em;
+  margin-left: 0.25em;
+  font-size: 0.7em;
 }
 
 .success-text {
