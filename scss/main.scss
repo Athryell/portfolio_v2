@@ -79,13 +79,6 @@
         text-align: center;
     }
 
-    .iconify {
-        position: relative;
-        margin: 0.5rem 0.7rem 0;
-        width: 3rem;
-        height: 3rem;
-    }
-
     .bg-light {
         background-color: var(--col-light);
         padding: 0.25rem;
@@ -95,15 +88,25 @@
 
 .tooltip-wrapper {
     position: relative;
+    display: inline-grid;
+    place-items: center;
+    width: 3rem;
+    height: 3rem;
+    cursor: help;
+    margin: 0.5rem 0.75rem;
+
+    .iconify {
+        border-radius: $br-l;
+        width: 100%;
+        height: 100%;
+    }
 
     &::after {
         position: absolute;
-        z-index: 10;
         content: attr(data-tooltip);
-        top: 100%;
-        left: 0;
-        right: 0;
-        text-align: center;
+        z-index: 10;
+        padding-inline: 0.5em;
+        top: 120%;
         font-size: var(--fs-small);
         background-color: var(--col-dark);
         color: var(--col-lightest);
@@ -115,17 +118,18 @@
 
     &[data-tooltip="Webflow"] { color: hsl(233, 96%, 63%); }
     &[data-tooltip="jQuery"] { color: hsl(205, 83%, 37%); }
-    &[data-tooltip="Responsive"] { color: var(--col-lightest); }
+    &[data-tooltip="Responsive"],
+    &[data-tooltip="Performances"] { color: var(--col-lightest); }
     &[data-tooltip="Github"] { color: black; }
 
     &[data-tooltip="User Experience"] {
+        display: inline;
         text-decoration: underline;
-        cursor: help;
+        margin: 0;
 
         &::after {
-            top: -150%;
-            left: -100%;
-            right: -100%;
+            left: -80%;
+            top: -180%;
         }
     }
 
@@ -147,7 +151,6 @@
         .article {
             padding: 0.75rem 1em;
             border-left: 1px solid var(--col-dark);
-            // border-radius: $br-l
         }
 
         .services__title,
@@ -157,8 +160,6 @@
 
         .services__icons p { transform: translateX(-0.7rem); }
     }
-
-    
 }
 
 //* - - - - - - - - - - - - - - - - - ABOUT - - - - - - - - - - - - - - - - -

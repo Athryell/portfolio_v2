@@ -740,12 +740,6 @@ em {
   position: relative;
   text-align: center;
 }
-.services__icons .iconify {
-  position: relative;
-  margin: 0.5rem 0.7rem 0;
-  width: 3rem;
-  height: 3rem;
-}
 .services__icons .bg-light {
   background-color: var(--col-light);
   padding: 0.25rem;
@@ -754,15 +748,24 @@ em {
 
 .tooltip-wrapper {
   position: relative;
+  display: inline-grid;
+  place-items: center;
+  width: 3rem;
+  height: 3rem;
+  cursor: help;
+  margin: 0.5rem 0.75rem;
+}
+.tooltip-wrapper .iconify {
+  border-radius: 0.5rem;
+  width: 100%;
+  height: 100%;
 }
 .tooltip-wrapper::after {
   position: absolute;
-  z-index: 10;
   content: attr(data-tooltip);
-  top: 100%;
-  left: 0;
-  right: 0;
-  text-align: center;
+  z-index: 10;
+  padding-inline: 0.5em;
+  top: 120%;
   font-size: var(--fs-small);
   background-color: var(--col-dark);
   color: var(--col-lightest);
@@ -777,20 +780,20 @@ em {
 .tooltip-wrapper[data-tooltip=jQuery] {
   color: #106bad;
 }
-.tooltip-wrapper[data-tooltip=Responsive] {
+.tooltip-wrapper[data-tooltip=Responsive], .tooltip-wrapper[data-tooltip=Performances] {
   color: var(--col-lightest);
 }
 .tooltip-wrapper[data-tooltip=Github] {
   color: black;
 }
 .tooltip-wrapper[data-tooltip="User Experience"] {
+  display: inline;
   text-decoration: underline;
-  cursor: help;
+  margin: 0;
 }
 .tooltip-wrapper[data-tooltip="User Experience"]::after {
-  top: -150%;
-  left: -100%;
-  right: -100%;
+  left: -80%;
+  top: -180%;
 }
 .tooltip-wrapper:hover::after {
   opacity: 1;
