@@ -194,23 +194,6 @@
 
 //* - - - - - - - - - - - - - - - - - MY WORK - - - - - - - - - - - - - - - - -
 
-.disclaimer {
-    margin-bottom: 3rem;
-    text-align: left;
-
-    .disclaimer__title {
-        font-size: var(--fs-h3);
-        line-height: var(--lh-h3);
-        text-align: center;
-        color: var(--col-primary)
-    }
-
-    .disclaimer__text {
-        font-size: var(--fs-small);
-        line-height: var(--lh-small);
-    }
-}
-
 .card-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(min(24rem, 100%), 1fr));

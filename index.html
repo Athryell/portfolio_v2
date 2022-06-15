@@ -67,7 +67,7 @@
         </section>
         
         <!-- Services -->
-        <section class="section" aria-labelledby="services__title">
+        <section class="section" aria-labelledby="services__title" id="services-link">
             <h1 class="section__title title-separator" id="services__title">What I do</h1>
 
             <div class="toggle-services">
@@ -77,7 +77,7 @@
                 </label>
             </div>
             
-            <div class="services" id="services-link">
+            <div class="services">
                 <article class="article">
                     <h2 class="services__title">Front-end</h2>
                     <div class="services__text">
@@ -162,7 +162,7 @@
         </section>
 
         <!-- About -->
-        <section class="section" aria-labelledby="about_title">
+        <section class="section" aria-labelledby="about_title" id="about-link">
             <h1 class="section__title title-separator" id="about_title">Who am I</h1>
 
             <div class="about__toggle-container">
@@ -185,7 +185,7 @@
                 </div>
             </div>
 
-            <article class="article article--about" id="about-link">
+            <article class="article article--about">
                 <div class="about-short" data-length="short">
                     <p>I love to learn, challenge myself and build stuff.</p>
                     <p>That's it!</p>
@@ -209,20 +209,8 @@
         </section>
 
         <!-- My work -->
-        <section class="section" aria-labelledby="work__title">
+        <section class="section" aria-labelledby="work__title" id="work-link">
             <h1 class="section__title title-separator" id="work__title">My work</h1>
-            
-            <aside class="disclaimer" id="work-link">
-                <h2 class="disclaimer__title">Disclaimer</h2>
-                <div class="disclaimer__text">
-                    <p>
-                        Some of these project were only <em>back-end focused</em>, I didn’t have a lot of CSS and design experience at the time.
-                    </p>
-                    <p>
-                        I'm currently <em>beautifying</em> them so I can show you something a little bit nicer, but if you really want to see them in action I temporary linked some <em>video</em> with an overview of the projects!
-                    </p>
-                </div>
-            </aside>
             
             <div class="card-container">
                 <div class="card"> <!-- Happy Dungeon -->
@@ -260,15 +248,15 @@
                         <h2 class="card__title">Ecommerce clone</h2>
                         <div class="card__text">
                             <p>
-                                My first e-commerce clone was made during the course "CS50: Web Programming with Python and JS" and it allowed me to learn and deepen the understanding of databases and how to save and manipulate users entries.
+                                My first e-commerce clone was made during the course "CS50: Web Programming with Python and JS" and it allowed me to learn and deepen the understanding of databases, django models and how to save and manipulate users entries.
                             </p>
                             <p>
-                                Here users are able to load an article with a starting price and a deadline. Other users could add it to watchlist or place bids, receive a notification in case they won the auction and be the only ones to see the article they won.
+                                Here users are able to load an article with a starting price and a deadline. Other users can write comments, search by category, add the article to their watchlist, place bids and receive a notification in case they won the auction.
                             </p>
                         </div>
                             
                         <div class="card__links">
-                            <a class="btn-primary btn-small tooltip-video" href="https://www.youtube.com/watch?v=gpOiC_vCS90" target="_blank">Video</a>
+                            <a class="btn-primary btn-small" href="https://gee-commerce.herokuapp.com/" target="_blank">Check it out</a>
                             <a class="btn-secondary btn-small" target="_blank" href="https://github.com/Athryell/project-ecommerce">Github</a>
                         </div>
                     </div>
@@ -284,12 +272,12 @@
                     <div class="card__inner">
                         <h2 class="card__title">Mail service clone</h2>
                         <div class="card__text">
-                            <p>This was quite nice to build, it works a lot with forms.</p>
-                            <p>Nothing too fancy but quite functional: it highlights the unread mail, it auto populates fields when needed, it is possible to customize and organize the mail boxes, and of course send and receive mails.</p>
+                            <p>This was quite interesting to build, I learned more in dept about API calls.</p>
+                            <p>Mails are automatically tagged as read/unread and user can modify this state or archive them. Fields are auto populates when needed.</p>
                         </div>
 
                         <div class="card__links">
-                            <a class="btn-primary btn-small tooltip-video" href="https://www.youtube.com/watch?v=Tx5CAg_0D-M" target="_blank">Video</a>
+                            <a class="btn-primary btn-small" href="https://project-mail.herokuapp.com" target="_blank">Check it out</a>
                             <a class="btn-secondary btn-small" target="_blank" href="https://github.com/Athryell/project-mail.git">Github</a>
                         </div>
                     </div>
@@ -305,8 +293,8 @@
                     <div class="card__inner">
                         <h2 class="card__title">Social network clone</h2>
                         <div class="card__text">
-                            <p>Some common features of social websites and app are the ability to like comments, reply to them and edit yours (in place and fast, in case you did a grammatical error..)</p>
-                            <p>With this social network you can do all of above!</p>
+                            <p>Writing comments, replying to them and quickly change the content (in case you did a big grammatical error..) are common features of social websites. As well as the chance to follow and be followed.</p>
+                            <p>In this project you can do all of this but I mainly focused on edit the comments in place with vanilla JS, without reloading the entire page, for a better <span class="tooltip-wrapper" data-tooltip="User Experience">UX</span>.</p>
                         </div>
 
                         <div class="card__links">
@@ -383,7 +371,7 @@
         </section>
 
         <!-- Contact -->
-        <section class="section section--contact" aria-labelledby="contact__title">
+        <section class="section section--contact" aria-labelledby="contact__title" id="contact-link">
             <span id="success-text" class="success-text">Message successfully sent!</span>
             
             <div class="article">
@@ -394,7 +382,7 @@
 
             <span class="my-mail"><i class="iconify-inline envelope accent-primary" data-icon="fa6-solid:envelope"></i>alessandro.provvisionato@hotmail.com</span>
 
-            <form id="contact-link" class="contact-form" action="https://formsubmit.co/alessandro.provvisionato@hotmail.com" method="POST">
+            <form class="contact-form" action="https://formsubmit.co/alessandro.provvisionato@hotmail.com" method="POST">
                 <input type="hidden" name="_subject" value="New message from portfolio!">
                 <input type="hidden" name="_next" value="https://alepro.netlify.com#success-text">
 

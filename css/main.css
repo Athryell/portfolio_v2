@@ -179,10 +179,12 @@ em {
   border-bottom: 1px solid var(--col-dark);
   text-align: center;
   text-align: -webkit-center;
+  scroll-margin-top: -300px;
 }
 @media (min-width: 600px) {
   .section {
     padding: 8rem 3.5rem;
+    scroll-margin-top: -350px;
   }
 }
 
@@ -852,21 +854,6 @@ em {
     margin-inline: auto;
   }
 }
-.disclaimer {
-  margin-bottom: 3rem;
-  text-align: left;
-}
-.disclaimer .disclaimer__title {
-  font-size: var(--fs-h3);
-  line-height: var(--lh-h3);
-  text-align: center;
-  color: var(--col-primary);
-}
-.disclaimer .disclaimer__text {
-  font-size: var(--fs-small);
-  line-height: var(--lh-small);
-}
-
 .card-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(min(24rem, 100%), 1fr));
