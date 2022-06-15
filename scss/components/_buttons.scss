@@ -9,7 +9,7 @@
     padding: 0.5rem 1rem;
     font-weight: $fw-bold;
     text-transform: uppercase;
-    font-size: 0.875rem;
+    font-size: var(--fs-body);
     line-height: var(--lh-body);
     cursor: pointer;
     transition: background-color 200ms;
@@ -51,7 +51,7 @@
 }
 
 .btn-small {
-    padding: 0.24rem 0.75rem;
+    padding: 0.25rem 0.75rem;
 }
 
 #top-btn {
