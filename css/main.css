@@ -1,3 +1,4 @@
+@charset "UTF-8";
 *,
 *::before,
 *::after {
@@ -167,6 +168,22 @@ body {
 
 .link {
   text-decoration: underline;
+}
+
+.list--check li {
+  position: relative;
+  margin-left: 2rem;
+}
+.list--check li::before {
+  position: absolute;
+  left: -1.5rem;
+  content: "✓";
+  margin-right: 1.5rem;
+  color: var(--col-secondary);
+}
+
+.list--dot li::marker {
+  color: var(--col-secondary);
 }
 
 em {
@@ -772,6 +789,7 @@ em {
   background-color: var(--col-dark);
   color: var(--col-lightest);
   border-radius: 0.125rem;
+  width: max-content;
   opacity: 0;
   transform: translateY(5px);
   transition: opacity 0.3s, transform 0.5s ease-out;
@@ -789,13 +807,13 @@ em {
   color: black;
 }
 .tooltip-wrapper[data-tooltip="User Experience"] {
-  display: inline;
+  width: initial;
+  height: initial;
   text-decoration: underline;
   margin: 0;
 }
 .tooltip-wrapper[data-tooltip="User Experience"]::after {
-  left: -80%;
-  top: -180%;
+  top: -110%;
 }
 .tooltip-wrapper:hover::after {
   opacity: 1;
