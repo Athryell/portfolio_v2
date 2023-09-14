@@ -1,0 +1,56 @@
+@use '../abstracts' as *;
+
+.ribbon {
+    position: absolute;
+    top: -11px;
+    left: -15px;
+    width: 250px;
+    height: 250px;
+    overflow: hidden;
+
+    @include for-phone-only {
+        padding: 8rem 3.5rem;
+        scroll-margin-top: -350px;
+    }
+
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+      display: block;
+      z-index: -1;
+      border: 5px solid var(--col-primary-darker);
+      border-top-color: transparent;
+      border-left-color: transparent;
+    }
+
+    &::before {
+      top: 0;
+      right: 0;
+    }
+
+    &::after {
+      bottom: 0;
+      left: 0;
+    }
+
+    span {
+      position: absolute;
+      display: block;
+      right: -65px;
+      top: 70px;
+      width: 400px;
+      padding-block: 15px;
+      background: linear-gradient(var(--col-primary-darkest) 0%, var(--col-primary) 100%);
+      box-shadow: 0 3px 10px -5px rgba(0, 0, 0, 1);
+      color: var(--col-light);
+      text-transform: uppercase;
+      text-align: center;
+      font-weight: bold;
+      transform: rotate(-45deg);
+
+      @include for-phone-only {
+        right: -68px;
+      }
+    }
+  }
