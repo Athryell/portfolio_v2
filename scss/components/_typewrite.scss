@@ -1,0 +1,25 @@
+@use '../abstracts' as *;
+
+.typed-text {
+  font-family: var(--redressed);
+}
+
+.cursor {
+  display: inline-block;
+  width: 3px;
+  margin-left: 3px;
+  background: var(--col-primary);;
+}
+
+.cursor.blink {
+  animation: blink 0.8s ease-in-out infinite;
+}
+
+@keyframes blink {
+  0%, 100% {
+    background: var(--col-primary);
+  }
+  40%, 50% {
+    background: transparent;
+  }
+}
