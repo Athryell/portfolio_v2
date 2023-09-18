@@ -1,4 +1,5 @@
 @charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Redressed&display=swap");
 *,
 *::before,
 *::after {
@@ -752,6 +753,29 @@ em {
   }
 }
 
+.typed-text {
+  font-family: var(--redressed);
+}
+
+.cursor {
+  display: inline-block;
+  width: 3px;
+  margin-left: 3px;
+  background: var(--col-primary);
+}
+
+.cursor.blink {
+  animation: blink 0.8s ease-in-out infinite;
+}
+
+@keyframes blink {
+  0%, 100% {
+    background: var(--col-primary);
+  }
+  40%, 50% {
+    background: transparent;
+  }
+}
 .section__title--hero {
   font-weight: 700;
   max-width: 50rem;
