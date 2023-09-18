@@ -12,6 +12,50 @@ const aboutArticles = document.querySelectorAll('[data-length]')
 const goTopButton = document.getElementById('top-btn')
 const header = document.getElementById('header')
 
+
+const typedText = document.querySelector(".typed-text");
+const cursor = document.querySelector(".cursor");
+
+const textArray = [
+    "curious", "responsible", "innovative", "ice-cream eater",  "collaborative", "passionate", "polite", "resourceful", "adaptable",
+    "game", "git wizard", "bug buster", "pixel Picasso", "design-patterns Alchemist", "active", "just happy", "supercool to work with :)", "druid",
+    "wow! Thanks for staying on my site so long! Let me know if you've reached this line and want me to be your"];
+
+let textArrayIndex = 0;
+let charIndex = 0;
+
+const type = () => {
+    if (charIndex <= textArray[textArrayIndex].length - 1) {
+      cursor.classList.remove('blink');
+      typedText.textContent += textArray[textArrayIndex].charAt(charIndex);
+      charIndex++;
+      setTimeout(type, 120);
+    } else {
+      cursor.classList.add('blink');
+      setTimeout(erase, 1200);
+    }
+  }
+
+const erase = () => {
+  if (charIndex > 0) {
+    cursor.classList.remove('blink');
+    typedText.textContent = textArray[textArrayIndex].slice(0, charIndex - 1);
+    charIndex--;
+    setTimeout(erase, 80);
+  } else {
+    cursor.classList.add('blink');
+    textArrayIndex++;
+    if (textArrayIndex > textArray.length - 1) {
+      textArrayIndex = 0;
+    }
+    setTimeout(type, 1000);
+  }
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+    type();
+  })
+
 window.addEventListener('load', () => {
     if (window.location.href.includes('#success-text')) {
         const successAlert = document.getElementById('success-text')
