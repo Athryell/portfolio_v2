@@ -18,7 +18,7 @@ const cursor = document.querySelector(".cursor");
 
 const textArray = [
     "curious", "responsible", "innovative", "ice-cream eater",  "collaborative", "passionate", "polite", "resourceful", "adaptable",
-    "game", "git wizard", "bug buster", "pixel Picasso", "design-patterns Alchemist", "active", "just happy", "supercool to work with :)", "druid",
+    "game generalist", "git wizard", "bug buster", "pixel Picasso", "design-patterns alchemist", "fitness fan", "book eater", "just happy", "supercool to work with :)", "druid",
     "wow! Thanks for staying on my site so long! Let me know if you've reached this line and want me to be your"];
 
 let textArrayIndex = 0;
